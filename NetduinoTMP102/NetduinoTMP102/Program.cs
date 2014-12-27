@@ -1,11 +1,9 @@
-﻿using System;
-using System.Threading;
+﻿using System.Threading;
 using Microsoft.SPOT;
-using Microsoft.SPOT.Hardware;
 
-using Sensor;
+using ToolBoxes;
 
-namespace NetduinoTMP102
+namespace TestNetduinoTMP102
 {
     public class Program
     {

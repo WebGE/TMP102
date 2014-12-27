@@ -1,10 +1,7 @@
-using System;
 using System.Threading;
-
-using Microsoft.SPOT;
 using Microsoft.SPOT.Hardware;
 
-namespace Sensor
+namespace ToolBoxes
 {
     public class TMP102
     {
