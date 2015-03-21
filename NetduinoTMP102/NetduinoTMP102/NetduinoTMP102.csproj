@@ -43,7 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TMP102\TMP102.csproj">
-      <Project>{A6A1E305-CDE0-4FC4-938A-985F820CE324}</Project>
+      <Project>{F6BA88F4-5D71-4AE0-898A-98D8EB9C4D7D}</Project>
       <Name>TMP102</Name>
     </ProjectReference>
   </ItemGroup>
