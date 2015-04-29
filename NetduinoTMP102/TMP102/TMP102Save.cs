@@ -19,25 +19,25 @@ namespace ToolBoxes
         {
             quarter_Hz,
             one_Hz,
-            four_Hz, // default rate
+            four_Hz,
             eight_Hz
         }
 
         public enum ThermostatMode
         {
-            ComparatorMode, // default
+            ComparatorMode,
             InterruptMode
         }
 
         public enum AlertPolarity
         {
-            activeLow, // default
+            activeLow,
             activeHigh
         }
 
         public enum ConsecutiveFaults
         {
-            one, // default
+            one,
             two,
             four,
             six
@@ -215,14 +215,12 @@ namespace ToolBoxes
 
         private int ReadRegister()
         {
-            int value = 0;
             I2CDevice.I2CTransaction[] xActions = new I2CDevice.I2CTransaction[2];
 
             xActions[0] = I2CDevice.CreateWriteTransaction(_registerNum);
             xActions[1] = I2CDevice.CreateReadTransaction(_registerValue);
-            value = _TMP102.Execute(xActions, 30);
-            //_TMP102.Dispose();
-            return value;
+            
+            return _TMP102.Execute(xActions, 30);
         }
 
         private int WriteRegister()
