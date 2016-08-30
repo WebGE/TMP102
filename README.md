@@ -1,8 +1,13 @@
 TMP102
 ======
 
-Tags: TMP102 temperature sensor, Netduino, Netduino plus 2, C#, Visual Studio.
+Tags: I²C, TMP102, temperature sensor, Netduino, C#, Visual Studio.
 
-Target: Netduino, Netduino plus 2.
+Target: Netduino, Netduino plus 2, Netduino 3.
 
-This library can be use to control a TMP102 temperature sensor on a Netduino using I2C bus. Code written in C# with Visual Studio 2010. Test program for sample.
+A NETMF library for TMP102 Low-Power Digital Temperature Sensor With SMBus and Two-Wire Serial
+Interface in SOT563.
+
+Code written in C# with Visual Studio 2013. 
+
+NetduinoTMP102: Example test program.
