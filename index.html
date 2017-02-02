@@ -153,10 +153,17 @@
       </ul>
       <hr/>
 
-      <h3>
-        <a id="classe-tmp102" class="anchor" href="#classe-tmp102" aria-hidden="true"><span class="octicon octicon-link"></span></a>Classe
-        TMP102
-      </h3>
+      <p><strong>Création d'un projet avec l'IDE Visual Studio</strong></p>
+			<hr/>
+			<ol>
+				<li><strong>Utiliser</strong> le gestionnaire de paquets NuGet pour <strong>ajouter</strong> l'assembly <strong>MicroToolsKit</strong>				
+        	(disponible sur <a href="https://www.nuget.org/packages/WebGE.MicroToolsKit/" target="_blank">nuget.org</a>) dans le
+					répertoire <em>Références</em> du projet.(clic droit sur <em>Références</em> puis <em>Gérer les packages NuGet...</em>)</li>
+				<li><strong>Ajouter</strong> l'espace de noms <strong>Microtoolskit.Hardware.Sensors</strong> dans l'en-tête du fichier source.</li>
+				<li><strong>Créer</strong> un objet en utilisant le constructeur <em>TMP102</em>.</li>
+				<li><strong>Utiliser</strong> la méthode <strong>Read</strong> pour déclencher une mesure de température et la méthode <strong>asCelcius</strong> pour convertir le résultat en °C.</li>
+			</ol>
+			<hr/>
     </section>
   </div>
 
