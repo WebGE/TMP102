@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="description" content="Mesurer la température ambiante avec un TMP102 : Programme de test en C# et description de la classe TMP102 destinés à une Netduino+2">
+
+  <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+  <title>Mesurer la température ambiante avec un TMP102</title>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <div id="header_wrap" class="outer">
+    <header class="inner">
+      <a id="forkme_banner" href="https://github.com/WebGE/TMP102">View on GitHub</a>
+
+      <h1 id="project_title">Capteur de température ambiante I²C (TMP102)</h1>
+      <h2 id="project_tagline">Description de la classe <strong><em>TMP102</em></strong> développée en C# sous .NETMF 4.3 pour une Netduino plus 2,
+        une Netduino 3 ou les cartes FEZ.</h2>
+
+      <section id="downloads">
+        <a class="zip_download_link" href="https://github.com/WebGE/TMP102/zipball/master">Download this project as a .zip file</a>
+        <a class="tar_download_link" href="https://github.com/WebGE/TMP102/tarball/master">Download this project as a tar.gz file</a>
+      </section>
+    </header>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div id="main_content_wrap" class="outer">
+    <section id="main_content" class="inner">
+      <hr>
+      <h3>Le capteur TMP102: Low-Power Digital Temperature Sensor With SMBus™ and Two-Wire Serial Pages.</h3>
+      <hr>
+      <ul>
+        <li><strong>Présentation</strong></li>
+        <p>Le capteur TMP102 mesure la température avec une précision de 0,5°C et communique l'information via une interface
+          I²C.
+        </p>
+        <li><strong>Schéma interne du composant</strong></li>
+        <p align="center"><img src="images/fonctionnelTMP102.JPG"></p>
+        <li><strong>Adressage</strong></li>
+        <li><strong>Documentation: </strong><a href="http://www.ti.com.cn/cn/lit/ds/symlink/tmp102.pdf" target="_blank">pdf</a></li>
+        <li><strong>Distributeur: </strong><a href="http://www.gotronic.fr/art-capteur-de-temperature-tmp102-20226.htm" target="_blank">Go Tronic</a></li>
+      </ul>
+
+      <h3>
+
+        <a id="modules-tmp102" class="anchor" href="#modules-tmp102" aria-hidden="true"><span class="octicon octicon-link"></span></a>Modules
+        TMP102
+      </h3>
+
+      <h3>
+        <a name="carte-netduino-de-secret-labs" class="anchor" href="#carte-netduino-de-secret-labs" target="_blank">
+          <span class="octicon octicon-link"></span></a>Les cartes Netduino</h3>
+      <h5>Secret Labs</h5>
+      <hr/>
+      <ul>
+        <li><strong>Microcontrôleur</strong> : STM32F405RG 32 bits à architecture Cortex-M4 cadencé à 168 MHz.</li>
+        <li><strong>RAM</strong> : 100 KB (164+)*.</li>
+        <li><strong>Flash</strong> : 384 KB (1408KB)*.</li>
+        <li><strong>Port Ethernet : </strong> 10Mbps (Wifi:802.11b/g/n)*.</li>
+        <li><strong>E/S numériques</strong> : 22</li>
+        <li><strong>Entrées analogiques</strong> : 6</li>
+        <li><strong>Stockage</strong>: carte µSD</li>
+        <li><strong>IDE</strong> : Microsoft Visual Studio</li>
+        <li><strong>Framework</strong> : .NETMF 4.3</li>
+        <li><strong>Langages de programmation</strong> : C#, VB</li>
+      </ul>
+
+      <table>
+        <tr>
+          <td><img src="http://www.mouser.com/images/microsites/Netduino_Plus_2.jpg" alt="Netduino plus 2" target="_blank" /></td>
+          <td><img src="http://static.netduino.com/images/netduino3wifi/specs/inputandoutput.jpg" alt="Netduino 3 wifi" target="_blank"
+            /></td>
+        </tr>
+        <tr>
+          <td align="center"><strong>Netduino + 2</strong></td>
+          <td align="center"><strong>Netduino 3 wifi* (compatible Gadgeteer)</strong></td>
+        </tr>
+      </table>
+
+      <ul>
+        <li><strong>Sites à consulter</strong> : <a href="http://netduino.com/netduinoplus2/specs.htm" target="_blank">Netduino</a>,
+          <a href="http://www.netmf.com/" target="_blank">NETMF</a></li>
+        <li><strong>Distributeurs</strong> : <a href="http://www.mouser.fr/Search/Refine.aspx?Keyword=netduino" target="_blank">Mouser Electronics</a></li>
+      </ul>
+      <hr/>
+      <h3>
+        <a name="carte-netduino-de-secret-labs" class="anchor" href="#carte-netduino-de-secret-labs" target="_blank">
+          <span class="octicon octicon-link"></span></a>Les cartes FEZ</h3>
+      <h5>GHI Electonics (Extrait)</h5>
+      <hr/>
+      <ul>
+        <li><strong>Microcontrôleur</strong> : 180 MHz 32-bit ARM Cortex-M4.(120 MHz 32-bit ARM Cortex-M3 )*</li>
+        <li><strong>SoC(SoM)*</strong> : <a href="https://www.ghielectronics.com/catalog/product/501" target="_blank">G80</a>
+          <a href="https://www.ghielectronics.com/catalog/product/373" target="_blank">G120*</a>
+        </li>
+        <li><strong>RAM</strong> : 156 KB(2.87 MB)*.</li>
+        <li><strong>Flash</strong> : 256 KB (13.67 MB)*.</li>
+        <li><strong>E/S numériques</strong> : 53(60)*</li>
+        <li><strong>Entrées analogiques</strong> : 16(8)*</li>
+        <li><strong>Réseaux : </strong> Ethernet TCP/IP, WiFi, and SSL.</li>
+        <li><strong>Stockage</strong>: carte µSD</li>
+        <li><strong>IDE</strong> : Microsoft Visual Studio</li>
+        <li><strong>Framework</strong> : .NETMF 4.3</li>
+        <li><strong>Langages de programmation</strong> : C#, VB</li>
+      </ul>
+
+      <table>
+        <tr>
+          <td><img src="https://www.ghielectronics.com/img/www/products/474-0_small.jpg" alt="PANDA III" /></td>
+          <td><img src="https://www.ghielectronics.com/img/www/products/540-0_small.jpg" alt="COBRA III" /></td>
+        </tr>
+        <tr>
+          <td align="center"><strong>PANDA III</strong></td>
+          <td align="center"><strong>COBRA III* (compatible Gadgeteer)</strong></td>
+        </tr>
+      </table>
+
+      <ul>
+        <li><strong>Sites à consulter</strong> : <a href="https://www.ghielectronics.com/" target="_blank">GHI ELECTRONICS</a>,
+          <a href="http://www.netmf.com/" target="_blank">NETMF</a></li>
+        <li><strong>Distributeurs</strong> : <a href="http://www.mouser.fr" target="_blank">Mouser Electronics</a></li>
+      </ul>
+      <hr/>
+      <h3>Wiki</h3>
+      <ul>
+        <li><strong>Des exemples de code pour les cartes Netduino et FEZ sont disponibles <br> sur Wikispaces: <a href="https://csharpembarquenetduino.wikispaces.com/" target="_blank">lien</a></strong></li>
+      </ul>
+      <hr>
+      <h3>Contenu du répertoire proposé au téléchargement</h3>
+      <hr/>
+      <p>Le répertoire proposé au téléchargement (au format zip ou tar.gz) contient la solution <strong>NetduinoTMP102</strong>        composée :
+      </p>
+      <ul>
+        <li>Du projet <strong>TMP102 </strong>: le <strong>code source</strong> de la classe <em>TMP102</em>.</li>
+        <li>Du projet <strong>TestNetduinoTMP102 </strong>: un exemple d'utilisation de cette classe.</li>
+      </ul>
+      <p><em>Remarques : La dernière version <strong>compilée</strong> de la classe <strong>TMP102</strong> se situe dans la bibliothèque <strong>MicroToolsKit</strong> disponible sur <a href="https://www.nuget.org/packages/WebGE.MicroToolsKit/" target="_blank">nuget.org</a>.</em></p>
+      <p align="center"><img src="images/NuGet-large.png" /></p>
+      <p><em>Installer cette bibliothèque dans le projet simplifie l'utilisation de cette classe.</em></p>
+      <hr/>
+      <h3>Description et utilisation de la classe TMP102</h3>
+      <ul>
+        <li><strong>Rôle: </strong>Contrôler un capteur de température TMP102 via un bus I²C.</li>
+        <li><strong>Assembly: </strong> <em>MicroToolsKit</em> (disponible sur <a href="https://www.nuget.org/packages/WebGE.MicroToolsKit/"
+            target="_blank">nuget.org</a>)</li>
+        <li><strong>Espace de noms: </strong><em>Microtoolskit.Hardware.Sensors</em></li>
+      </ul>
+      <hr/>
+
+      <p><strong>Création d'un projet avec l'IDE Visual Studio</strong></p>
+      <hr/>
+      <ol>
+        <li><strong>Utiliser</strong> le gestionnaire de paquets NuGet pour <strong>ajouter</strong> l'assembly <strong>MicroToolsKit</strong>          (disponible sur <a href="https://www.nuget.org/packages/WebGE.MicroToolsKit/" target="_blank">nuget.org</a>) dans
+          le répertoire <em>Références</em> du projet.(clic droit sur <em>Références</em> puis <em>Gérer les packages NuGet...</em>)</li>
+        <li><strong>Ajouter</strong> l'espace de noms <strong>Microtoolskit.Hardware.Sensors</strong> dans l'en-tête du fichier
+          source.
+        </li>
+        <li><strong>Créer</strong> un objet en utilisant le constructeur <em>TMP102</em>.</li>
+        <li><strong>Utiliser</strong> la méthode <strong>Read</strong> pour déclencher une mesure de température et la méthode
+          <strong>asCelcius</strong> pour convertir le résultat en °C.</li>
+      </ol>
+      <hr/>
+      <p><strong>Constructeur</strong></p>
+      <table>
+        <tr>
+          <td></td>
+          <td><strong>Syntaxe</strong></td>
+          <td><strong>Description</strong></td>
+        </tr>
+        <tr>
+          <td><img src="images/Method_16x.png"></td>
+          <td><strong>TMP102</strong>()</td>
+          <td>Instancie un objet "TMP102".</td>
+        </tr>
+      </table>
+
+      <p><strong>Méthodes publiques</strong></p>
+      <table>
+        <tr>
+          <td></td>
+          <td><strong>Syntaxe</strong></td>
+          <td><strong>Description</strong></td>
+        </tr>
+        <tr>
+          <td><img src="images/Method_16x.png"></td>
+          <td><strong>float asCelcius</strong>()</td>
+          <td>Renvoie la température en degrés Celcius.</td>
+        </tr>
+        <tr>
+          <td><img src="images/Method_16x.png"></td>
+          <td><strong>float asFarenheight</strong>()</td>
+          <td>Renvoie la température en degrés Celcius.</td>
+        </tr>
+        <tr>
+          <td><img src="images/Method_16x.png"></td>
+          <td><strong>float asKelvin</strong>()</td>
+          <td>Renvoie la température en Kelvin.</td>
+        </tr>
+        <tr>
+          <td><img src="images/Method_16x.png"></td>
+          <td><strong>float asRankine</strong>()</td>
+          <td>Renvoie la température en Rankine.</td>
+        </tr>
+        <tr>
+          <td><img src="images/Method_16x.png"></td>
+          <td><strong>float Read</strong>()</td>
+          <td>Renvoie la température en donnée brute.</td>
+        </tr>
+      </table>
+    </section>
+  </div>
+
+  <!-- FOOTER  -->
+  <div id="footer_wrap" class="outer">
+    <footer class="inner">
+      <p class="copyright">Mesurer la température ambiante avec un TMP102 maintained by <a href="https://github.com/WebGE">WebGE</a></p>
+      <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+    </footer>
+  </div>
+
+
+
+</body>
+
+</html>
