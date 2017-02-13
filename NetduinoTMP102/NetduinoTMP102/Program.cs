@@ -9,13 +9,13 @@ namespace TestNetduinoTMP102
     {
         public static void Main()
         {
-            TMP102 CPTTEMP102 = new TMP102();
-            CPTTEMP102.Init(TMP102.ADD0.Gnd);
+            TMP102 CptTMP102 = new TMP102();
+            CptTMP102.Init();
 
             while (true)
             {
-                CPTTEMP102.Read();
-                Debug.Print("Temperature: " + CPTTEMP102.asCelcius() + " C");
+                float temperature = CptTMP102.ReadAsCelcius();
+                Debug.Print("Temperature: " + temperature.ToString("F1") + " C");
 
                 // Sleep for 1000 milliseconds
                 Thread.Sleep(1000);

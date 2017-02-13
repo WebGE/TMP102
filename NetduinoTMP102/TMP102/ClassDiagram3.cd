@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ToolBoxes.TMP102">
+    <Position X="0.5" Y="0.5" Width="2.5" />
+    <Members>
+      <Field Name="_alertPolarity" Hidden="true" />
+      <Field Name="_consecutiveFaults" Hidden="true" />
+      <Field Name="_oneShotMode" Hidden="true" />
+      <Field Name="_registerNum" Hidden="true" />
+      <Field Name="_registerValue" Hidden="true" />
+      <Field Name="_temperature" Hidden="true" />
+      <Field Name="_thermostatMode" Hidden="true" />
+      <Field Name="BusI2C" Hidden="true" />
+      <Field Name="Config" Hidden="true" />
+      <Method Name="Init" Hidden="true" />
+      <Method Name="Read" Hidden="true" />
+      <Method Name="ReadRegister" Hidden="true" />
+      <Method Name="WriteRegister" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="ToolBoxes.TMP102.ADD0" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>TMP102.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="ToolBoxes.TMP102.ConversionRate" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>TMP102.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="ToolBoxes.TMP102.ThermostatMode" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>TMP102.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="ToolBoxes.TMP102.AlertPolarity" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>TMP102.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="ToolBoxes.TMP102.ConsecutiveFaults" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>TMP102.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="ToolBoxes.TMP102.Registers" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>TMP102.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>gCACCBAAAkAAAAAgAAAAAAAwAAACAAABIAQCAAAAEAA=</HashCode>
+      <FileName>TMP102.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

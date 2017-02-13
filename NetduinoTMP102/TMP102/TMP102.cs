@@ -5,8 +5,24 @@ namespace ToolBoxes
 {
     public class TMP102
     {
-        I2CDevice _TMP102 = null;
+        private I2CDevice.Configuration Config;
+        private I2CDevice BusI2C;
 
+        private byte[] _registerNum = new byte[1] { (byte)Registers.Configuration };
+        private byte[] _registerValue = new byte[2];
+
+        private float _temperature = 0.0f;
+
+        private bool _oneShotMode;
+        private AlertPolarity _alertPolarity;
+        private ThermostatMode _thermostatMode;
+        private ConsecutiveFaults _consecutiveFaults;
+
+
+        /// <summary>
+        /// 7 bits Address pin ADD0. 
+        /// ADD0.Gnd = 0x48, ADD0.Vcc = 0x49, ADD0.SDA = 0x4A, ADD0.SCL = 0x4B
+        /// </summary>
         public enum ADD0
         {
             Gnd,
@@ -15,6 +31,9 @@ namespace ToolBoxes
             SCL
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public enum ConversionRate
         {
             quarter_Hz,
@@ -23,18 +42,27 @@ namespace ToolBoxes
             eight_Hz
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public enum ThermostatMode
         {
             ComparatorMode, // default
             InterruptMode
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public enum AlertPolarity
         {
             activeLow, // default
             activeHigh
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public enum ConsecutiveFaults
         {
             one, // default
@@ -50,37 +78,80 @@ namespace ToolBoxes
             T_low = 0x02,
             T_high = 0x03
         }
+// -------------------------------------------------------------------------------------------------------------------------------------
 
-        private ushort _sensorAddress;
-
-        private byte[] _registerNum = new byte[1] { (byte)Registers.Configuration };
-        private byte[] _registerValue = new byte[2];
-
-        private float _temperature = 0.0f;
-
-        private bool _oneShotMode;
-        private AlertPolarity _alertPolarity;
-        private ThermostatMode _thermostatMode;
-        private ConsecutiveFaults _consecutiveFaults;
-
-        public bool Init(ADD0 addressSelect)
+        public TMP102(ADD0 addressSelect = ADD0.Gnd, int FreqBusI2C = 100)
         {
-            return Init(addressSelect, false, AlertPolarity.activeHigh, ConversionRate.four_Hz, ThermostatMode.ComparatorMode, ConsecutiveFaults.one, 0, 0);
+            ushort _sensorAddress = 0x48;
+            switch (addressSelect)
+            {
+                case ADD0.Gnd: _sensorAddress = 0x90 >> 1; break;
+                case ADD0.Vcc: _sensorAddress = 0x92 >> 1; break;
+                case ADD0.SDA: _sensorAddress = 0x94 >> 1; break;
+                case ADD0.SCL: _sensorAddress = 0x96 >> 1; break;
+            }
+            Config = new I2CDevice.Configuration(_sensorAddress, FreqBusI2C);
         }
-
+        /// <summary>
+        /// Init TMP102 with oneShotMode = false, alertPolarity = activeHigh, conversionRate = four_Hz, thermostatMode = ComparatorMode
+        /// consecutiveFaults = one, limitHigh = 0, limitLow = 0
+        /// </summary>
+        /// <returns></returns>
+        public bool Init()
+        {
+            return Init(false, AlertPolarity.activeHigh, ConversionRate.four_Hz, ThermostatMode.ComparatorMode, ConsecutiveFaults.one, 0, 0);
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="oneShotMode"></param>
+        /// <param name="alertPolarity"></param>
+        /// <param name="conversionRate"></param>
+        /// <param name="thermostatMode"></param>
+        /// <returns></returns>
         public bool Init(
-            ADD0 addressSelect = ADD0.Gnd,
             bool oneShotMode = false,
             AlertPolarity alertPolarity = AlertPolarity.activeHigh,
             ConversionRate conversionRate = ConversionRate.four_Hz,
             ThermostatMode thermostatMode = ThermostatMode.ComparatorMode)
         {
-            return Init(addressSelect, oneShotMode, alertPolarity, conversionRate, thermostatMode, ConsecutiveFaults.one, 0, 0);
+            return Init(oneShotMode, alertPolarity, conversionRate, thermostatMode, ConsecutiveFaults.one, 0, 0);
         }
 
+        /// <summary>
+        /// Read temperature and return Celcius
+        /// </summary>
+        /// <returns></returns>
+        public float ReadAsCelcius()
+        {
+            return _temperature = Read();
+        }
+        /// <summary>
+        /// Read temperature and return Fahrenheit
+        /// </summary>
+        /// <returns></returns>
+        public float ReadAsFahrenheit()
+        {
+            return (ReadAsCelcius() * 9.0f / 5.0f) + 32.0f;
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public float ReadAsKelvin()
+        {
+            return (ReadAsCelcius() + 273.15f);
+        }
+        /// <summary>
+        /// Read temperature and return Rankine
+        /// </summary>
+        /// <returns></returns>
+        public float ReadAsRankine()
+        {
+            return (ReadAsKelvin() * 9.0f / 5.0f);
+        }
 // -------------------------------------------------------------------------------------------------------------------------------------
         private bool Init(
-            ADD0 addressSelect,
             bool oneShotMode,
             AlertPolarity alertPolarity,
             ConversionRate conversionRate,
@@ -91,16 +162,6 @@ namespace ToolBoxes
         {
             // Sleep past first conversion
             Thread.Sleep(30);
-
-            switch (addressSelect)
-            {
-                case ADD0.Gnd: _sensorAddress = 0x90 >> 1; break;
-                case ADD0.Vcc: _sensorAddress = 0x92 >> 1; break;
-                case ADD0.SDA: _sensorAddress = 0x94 >> 1; break;
-                case ADD0.SCL: _sensorAddress = 0x96 >> 1; break;
-            }
-                    
-            _TMP102 = new I2CDevice(new I2CDevice.Configuration(_sensorAddress, 100));
 
             _alertPolarity = alertPolarity;
             _oneShotMode = oneShotMode;
@@ -141,11 +202,11 @@ namespace ToolBoxes
 
             return (bytesTransfered == 3);
         }
-// -------------------------------------------------------------------------------------------------------------------------------------
-        public float Read()
+
+        private float Read()
         {
             int bytesTransfered;
-            
+
             if (_oneShotMode)
             {
                 _registerNum[0] = (byte)Registers.Configuration;
@@ -189,48 +250,32 @@ namespace ToolBoxes
                     _temperature = (float)temp * 0.0625f;
                 }
             }
-
             return _temperature;
-        }
-
-        public float asCelcius()
-        {
-            return _temperature;
-        }
-
-        public float asFahrenheit()
-        {
-            return (asCelcius() * 9.0f / 5.0f) + 32.0f;
-        }
-
-        public float asKelvin()
-        {
-            return (asCelcius() + 273.15f);
-        }
-
-        public float asRankine()
-        {
-            return (asKelvin() * 9.0f / 5.0f);
         }
 
         private int ReadRegister()
         {
-            int value = 0;
+            int transferredByte = 0;
             I2CDevice.I2CTransaction[] xActions = new I2CDevice.I2CTransaction[2];
 
             xActions[0] = I2CDevice.CreateWriteTransaction(_registerNum);
             xActions[1] = I2CDevice.CreateReadTransaction(_registerValue);
-            value = _TMP102.Execute(xActions, 30);
-            //_TMP102.Dispose();
-            return value;
+            BusI2C = new I2CDevice(Config);
+            transferredByte = BusI2C.Execute(xActions, 30);
+            BusI2C.Dispose();
+            return transferredByte;
         }
 
         private int WriteRegister()
         {
+            int transferredByte = 0;
             I2CDevice.I2CTransaction[] xActions = new I2CDevice.I2CTransaction[1];
 
             xActions[0] = I2CDevice.CreateWriteTransaction(new byte[] { _registerNum[0], _registerValue[0], _registerValue[1] });
-            return _TMP102.Execute(xActions, 30);
+            BusI2C = new I2CDevice(Config);
+            transferredByte = BusI2C.Execute(xActions, 30);
+            BusI2C.Dispose();
+            return transferredByte;
         }
     }
 }
