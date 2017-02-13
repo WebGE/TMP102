@@ -32,7 +32,7 @@ namespace ToolBoxes
         }
 
         /// <summary>
-        /// 
+        /// Conversion rates : 8Hz, 4Hz (default), 1Hz, or 0.25Hz
         /// </summary>
         public enum ConversionRate
         {
@@ -43,7 +43,9 @@ namespace ToolBoxes
         }
 
         /// <summary>
-        /// 
+        /// In comparator mode, the ALERT pin becomes active
+        /// when the temperature equals or exceeds the value
+        /// in THIGH for a consecutive number of fault conditions
         /// </summary>
         public enum ThermostatMode
         {
@@ -52,7 +54,8 @@ namespace ToolBoxes
         }
 
         /// <summary>
-        /// 
+        /// The Polarity bit allows the user to adjust the polarity
+        /// of the ALERT pin output. 
         /// </summary>
         public enum AlertPolarity
         {
@@ -61,7 +64,9 @@ namespace ToolBoxes
         }
 
         /// <summary>
-        /// 
+        /// A fault condition exists when the measured
+        /// temperature exceeds the user-defined limits set in the
+        /// THIGH and TLOW registers
         /// </summary>
         public enum ConsecutiveFaults
         {
@@ -70,7 +75,10 @@ namespace ToolBoxes
             four,
             six
         }
-
+        /// <summary>
+        /// The 8-bit Pointer Register of the device is
+        /// used to address a given data register
+        /// </summary>
         private enum Registers
         {
             Temperature = 0x00,
@@ -93,7 +101,7 @@ namespace ToolBoxes
             Config = new I2CDevice.Configuration(_sensorAddress, FreqBusI2C);
         }
         /// <summary>
-        /// Init TMP102 with oneShotMode = false, alertPolarity = activeHigh, conversionRate = four_Hz, thermostatMode = ComparatorMode
+        /// Initialise TMP102 with default values : oneShotMode = false, alertPolarity = activeHigh, conversionRate = four_Hz, thermostatMode = ComparatorMode
         /// consecutiveFaults = one, limitHigh = 0, limitLow = 0
         /// </summary>
         /// <returns></returns>
@@ -102,13 +110,15 @@ namespace ToolBoxes
             return Init(false, AlertPolarity.activeHigh, ConversionRate.four_Hz, ThermostatMode.ComparatorMode, ConsecutiveFaults.one, 0, 0);
         }
         /// <summary>
-        /// 
+        /// Initialise the TMP102
         /// </summary>
-        /// <param name="oneShotMode"></param>
-        /// <param name="alertPolarity"></param>
-        /// <param name="conversionRate"></param>
-        /// <param name="thermostatMode"></param>
-        /// <returns></returns>
+        /// <param name="oneShotMode">true : OneShot, false : Conversion ready (default)</param>
+        /// <param name="alertPolarity">The polarity of the ALERT pin output</param>
+        /// <param name="conversionRate">Conversion rates : 8Hz, 4Hz (default), 1Hz, or 0.25Hz</param>
+        /// <param name="thermostatMode">In comparator mode, the ALERT pin becomes active
+        /// when the temperature equals or exceeds the value
+        /// in THIGH for a consecutive number of fault conditions</param>
+        /// <returns>true or false</returns>
         public bool Init(
             bool oneShotMode = false,
             AlertPolarity alertPolarity = AlertPolarity.activeHigh,
@@ -121,7 +131,7 @@ namespace ToolBoxes
         /// <summary>
         /// Read temperature and return Celcius
         /// </summary>
-        /// <returns></returns>
+        /// <returns>temperature as Celcius</returns>
         public float ReadAsCelcius()
         {
             return _temperature = Read();
@@ -129,15 +139,15 @@ namespace ToolBoxes
         /// <summary>
         /// Read temperature and return Fahrenheit
         /// </summary>
-        /// <returns></returns>
+        /// <returns>temperature as Fahrenheit</returns>
         public float ReadAsFahrenheit()
         {
             return (ReadAsCelcius() * 9.0f / 5.0f) + 32.0f;
         }
         /// <summary>
-        /// 
+        /// Read temperature and return Kelvin
         /// </summary>
-        /// <returns></returns>
+        /// <returns>temperature as Kelvin</returns>
         public float ReadAsKelvin()
         {
             return (ReadAsCelcius() + 273.15f);
@@ -145,7 +155,7 @@ namespace ToolBoxes
         /// <summary>
         /// Read temperature and return Rankine
         /// </summary>
-        /// <returns></returns>
+        /// <returns>temperature as Rankine</returns>
         public float ReadAsRankine()
         {
             return (ReadAsKelvin() * 9.0f / 5.0f);
