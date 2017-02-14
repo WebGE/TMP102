@@ -157,7 +157,8 @@
       <hr/>
       <ol>
         <li><strong>Utiliser</strong> le gestionnaire de paquets NuGet pour <strong>ajouter</strong> l'assembly <strong>MicroToolsKit</strong>          (disponible sur <a href="https://www.nuget.org/packages/WebGE.MicroToolsKit/" target="_blank">nuget.org</a>) dans
-          le répertoire <em>Références</em> du projet.(clic droit sur <em>Références</em> puis <em>Gérer les packages NuGet...</em>)</li>
+          le répertoire <em>Références</em> du projet.(clic droit sur <em>Références</em> dans le gestionnaire de solutions
+          de Visual Studio puis <em>Gérer les packages NuGet...</em>)</li>
         <li><strong>Ajouter</strong> l'espace de noms <strong>Microtoolskit.Hardware.Sensors</strong> dans l'en-tête du fichier
           source.
         </li>
@@ -177,9 +178,9 @@
         </tr>
         <tr>
           <td><img src="images/Method_16x.png"></td>
-          <td><strong>TMP102()</strong></td>
-          <td>Instancie un objet "TMP102". <br>Addresse <strong>SLA</strong> sur le bus I²C = ?. <br/>Fréquence du signal SCL
-            = ?.</td>
+          <td><strong>TMP102</strong>(<strong>ADD0</strong> <em>pin</em>, </strong>UInt16<strong> <em>Frequency</em> )</td>
+          <td>Instancie un objet "TMP102". <br>pin = ADD0.GND => Addresse <strong>SLA</strong> sur le bus I²C = 0x48. (par défaut) <br/>Fréquence du signal SCL
+            = 100kHz. (par défaut)</td>
         </tr>
       </table>
 
@@ -201,7 +202,7 @@
           <td><img src="images/Enumerator_16x.png"></td>
           <td><strong>AlertPolarity</strong></td>
           <td>
-            activeLow : <br /> activeHight : 
+            activeLow : <br /> activeHight :
           </td>
         </tr>
         <tr>
@@ -225,11 +226,11 @@
             Temperature : <br />Configuration : <br>T_Low :<br>T_High :
           </td>
         </tr>
-         <tr>
+        <tr>
           <td><img src="images/Enumerator_16x.png"></td>
           <td><strong>ThermostatMode</strong></td>
           <td>
-            ComparatorMode : <br />InterruptMode : 
+            ComparatorMode : <br />InterruptMode :
           </td>
         </tr>
       </table>
@@ -270,11 +271,11 @@
         </tr>
         <tr>
           <td><img src="images/Method_16x.png"></td>
-          <td><strong>bool</strong> Init([<strong>ADD0</strong> <em>addressSelect = ADD0.Gnd</em>],<br>
-          [<strong>bool</strong> <em>oneShotMode = false</em>],<br>
-          [<strong>AlertPolarity</strong> <em>alertPolarity = AlertPolarity.activeHight</em>],<br>
-          [<strong>ConversionRate</strong> <em>conversionRate = ConversionRate.four_Hz</em>], <br>
-          [<strong>ThermostatMode</strong> <em>thermostatMode = ThermostatMode.ComparatorMode</em>])
+          <td><strong>bool</strong> Init([<strong>ADD0</strong> <em>addressSelect = ADD0.Gnd</em>],<br> [
+            <strong>bool</strong> <em>oneShotMode = false</em>],<br> [
+            <strong>AlertPolarity</strong> <em>alertPolarity = AlertPolarity.activeHight</em>],<br> [
+            <strong>ConversionRate</strong> <em>conversionRate = ConversionRate.four_Hz</em>], <br> [
+            <strong>ThermostatMode</strong> <em>thermostatMode = ThermostatMode.ComparatorMode</em>])
           </td>
           <td>Initialisation le composant avec: <br>
           </td>
