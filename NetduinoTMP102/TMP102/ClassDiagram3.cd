@@ -12,7 +12,6 @@
       <Field Name="_thermostatMode" Hidden="true" />
       <Field Name="BusI2C" Hidden="true" />
       <Field Name="Config" Hidden="true" />
-      <Method Name="Init" Hidden="true" />
       <Method Name="Read" Hidden="true" />
       <Method Name="ReadRegister" Hidden="true" />
       <Method Name="WriteRegister" Hidden="true" />
