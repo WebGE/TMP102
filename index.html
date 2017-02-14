@@ -37,8 +37,8 @@
       <hr>
       <ul>
         <li><strong>Présentation</strong></li>
-        <p>Le capteur TMP102 mesure la température avec une précision de 0,5°C de -40°C à 125°C et communique l'information via une interface
-          I²C.
+        <p>Le capteur TMP102 mesure la température avec une précision de 0,5°C de -40°C à 125°C et communique l'information
+          via une interface I²C.
         </p>
         <li><strong>Schéma interne du composant</strong></li>
         <p align="center"><img src="images/fonctionnelTMP102.JPG"></p>
@@ -60,7 +60,7 @@
             <td><strong>SparkFun</strong></td>
           </tr>
           <tr align="center">
-            <td><img src="images/TMP102.png" width="75%" height="75%" ></td>
+            <td><img src="images/TMP102.png" width="75%" height="75%"></td>
           </tr>
           <tr align="center">
             <td><a href="https://www.sparkfun.com/products/13314" target="_blank">Documentation</a> -
@@ -265,14 +265,29 @@
           <td><img src="images/Enumerator_16x.png"></td>
           <td><strong>Registers</strong></td>
           <td>
-            Temperature : <br />Configuration : <br>T_Low :<br>T_High :
+            <p>Sélection des registres du TMP102</p>
+            <ul>
+              <li>Temperature : contient la valeur de la température sur 12bits (par défaut). (lecture)</li>
+              <li>Configuration : Paramétrage du TMP102 (lecture/évriture)</li>
+              <li>T_Low : Contient la valeur limite basse de la température</li>
+              <li>T_High : Contient la valeur limite haute de la température</li>
+            </ul>
           </td>
         </tr>
         <tr>
           <td><img src="images/Enumerator_16x.png"></td>
           <td><strong>ThermostatMode</strong></td>
           <td>
-            ComparatorMode : <br />InterruptMode :
+            <p></p>
+            <ul>
+              <li>ComparatorMode : En mode comparateur, la broche ALERT devient active lorsque la température est égale ou supérieure
+                à la valeur mémorisée dans T_HIGH et génère un nombre consécutif de défauts en accord avec <em>ConsecutiveFaults</em>
+                La broche ALERT reste active jusqu'à ce que la température soit inférieure à la valeur mémorisée dans T_LOW et que le
+                même nombre de défauts est atteint.</li>
+              <li>InterruptMode : en mode interruption, la broche ALERT devient active quand le nombre d'erreurs est
+                atteint... (voir le datasheet pour plus d'informations)
+              </li>
+            </ul>
           </td>
         </tr>
       </table>
