@@ -54,21 +54,21 @@
         TMP102
       </h3>
       <hr>
-      <div align="center">
-        <table>
-          <tr align="center">
-            <td><strong>SparkFun</strong></td>
-          </tr>
-          <tr align="center">
-            <td><img src="images/TMP102.png" width="75%" height="75%"></td>
-          </tr>
-          <tr align="center">
-            <td><a href="https://www.sparkfun.com/products/13314" target="_blank">Documentation</a> -
-              <a href="http://cdn.sparkfun.com/datasheets/Sensors/Temp/SparkFun_Digital_Temperature_Sensor_Breakout_-_TMP102.pdf">Schéma</a>
-            </td>
-          </tr>
-        </table>
-      </div>
+
+      <table width="100%">
+        <tr align="center">
+          <td><strong>SparkFun</strong></td>
+        </tr>
+        <tr align="center">
+          <td><img src="images/TMP102.png" width="75%" height="75%"></td>
+        </tr>
+        <tr align="center">
+          <td><a href="https://www.sparkfun.com/products/13314" target="_blank">Documentation</a> -
+            <a href="http://cdn.sparkfun.com/datasheets/Sensors/Temp/SparkFun_Digital_Temperature_Sensor_Breakout_-_TMP102.pdf">Schéma</a>
+          </td>
+        </tr>
+      </table>
+
       <hr>
       <h3>
         <a name="carte-netduino-de-secret-labs" class="anchor" href="#carte-netduino-de-secret-labs" target="_blank">
@@ -196,8 +196,9 @@
         <tr>
           <td><img src="images/Method_16x.png"></td>
           <td><strong>TMP102</strong>(<strong>ADD0</strong> <em>pin</em>, <strong>UInt16</strong> <em>Frequency</em> )</td>
-          <td>Instancie un objet "TMP102". <br>pin = ADD0.GND => Addresse <strong>SLA</strong> sur le bus I²C = 0x48. (par défaut)
-            <br/>Fréquence du signal SCL = 100kHz. (par défaut)</td>
+          <td>Instancie un objet "TMP102". <br><strong>pin : </strong> égal à ADD0.GND => Addresse <strong>SLA</strong> sur le
+            bus I²C = 0x48. (par défaut)
+            <br><strong>Frequency: </strong>>Féquence du signal SCL = 100kHz. (par défaut)</td>
         </tr>
       </table>
 
@@ -212,7 +213,7 @@
           <td><img src="images/Enumerator_16x.png"></td>
           <td><strong>ADD0</strong></td>
           <td>
-            <p>Si la broche ADD0 est connecté à :</p> 
+            <p>Si la broche ADD0 est connecté à :</p>
             <ul>
               <li><strong>GND</strong> : adresse <strong>SLA </strong>= 0x48</li>
               <li><strong>Vcc</strong> : adresse <strong>SLA </strong>= 0x49</li>
@@ -280,12 +281,12 @@
           <td>
             <p></p>
             <ul>
-              <li><strong>ComparatorMode</strong> : En mode comparateur, la broche ALERT devient active lorsque la température est égale ou supérieure
-                à la valeur mémorisée dans T_HIGH et génère un nombre consécutif de défauts en accord avec <em>ConsecutiveFaults</em>
-                La broche ALERT reste active jusqu'à ce que la température soit inférieure à la valeur mémorisée dans T_LOW et que le
-                même nombre de défauts est atteint.</li>
-              <li><strong>InterruptMode</strong> : en mode interruption, la broche ALERT devient active quand le nombre d'erreurs est
-                atteint... (voir le datasheet pour plus d'informations)
+              <li><strong>ComparatorMode</strong> : En mode comparateur, la broche ALERT devient active lorsque la température
+                est égale ou supérieure à la valeur mémorisée dans T_HIGH et génère un nombre consécutif de défauts en accord
+                avec <em>ConsecutiveFaults</em> La broche ALERT reste active jusqu'à ce que la température soit inférieure
+                à la valeur mémorisée dans T_LOW et que le même nombre de défauts est atteint.</li>
+              <li><strong>InterruptMode</strong> : en mode interruption, la broche ALERT devient active quand le nombre d'erreurs
+                est atteint... (voir le datasheet pour plus d'informations)
               </li>
             </ul>
           </td>
@@ -295,31 +296,6 @@
       <p><strong>Méthodes</strong></p>
       <table width="100%">
         <tr>
-          <td></td>
-          <td><strong>Syntaxe</strong></td>
-          <td><strong>Description</strong></td>
-        </tr>
-        <tr>
-          <td><img src="images/Method_16x.png"></td>
-          <td><strong>float asCelcius()</strong></td>
-          <td>Renvoi la valeur de la température en °C.</td>
-        </tr>
-        <tr>
-          <td><img src="images/Method_16x.png"></td>
-          <td><strong>float asFarenheit()</strong></td>
-          <td>Renvoi la valeur de la température en °F.</td>
-        </tr>
-        <tr>
-          <td><img src="images/Method_16x.png"></td>
-          <td><strong>float asKelvin()</strong></td>
-          <td>Renvoi la valeur de la température en K.</td>
-        </tr>
-        <tr>
-          <td><img src="images/Method_16x.png"></td>
-          <td><strong>float asRankine()</strong></td>
-          <td>Renvoi la valeur de la température en R.</td>
-        </tr>
-        <tr>
           <td><img src="images/Method_16x.png"></td>
           <td><strong>bool</strong> Init(<strong>ADD0 </strong><em>addressSelect</em>)</strong>
           </td>
@@ -328,7 +304,8 @@
         </tr>
         <tr>
           <td><img src="images/Method_16x.png"></td>
-          <td><strong>bool</strong> Init([<strong>ADD0</strong> <em>addressSelect = ADD0.Gnd</em>],<br> [
+          <td><strong>bool</strong> Init(<br> [
+            <strong>ADD0</strong> <em>addressSelect = ADD0.Gnd</em>],<br> [
             <strong>bool</strong> <em>oneShotMode = false</em>],<br> [
             <strong>AlertPolarity</strong> <em>alertPolarity = AlertPolarity.activeHight</em>],<br> [
             <strong>ConversionRate</strong> <em>conversionRate = ConversionRate.four_Hz</em>], <br> [
@@ -338,9 +315,29 @@
           </td>
         </tr>
         <tr>
-          <td><img src="images/Method_16x.png"></td>
-          <td><strong>float Read()</strong></td>
           <td></td>
+          <td><strong>Syntaxe</strong></td>
+          <td><strong>Description</strong></td>
+        </tr>
+        <tr>
+          <td><img src="images/Method_16x.png"></td>
+          <td><strong>float ReadAsCelcius()</strong></td>
+          <td>Renvoi la valeur de la température en °C.</td>
+        </tr>
+        <tr>
+          <td><img src="images/Method_16x.png"></td>
+          <td><strong>float ReadAsFarenheit()</strong></td>
+          <td>Renvoi la valeur de la température en °F.</td>
+        </tr>
+        <tr>
+          <td><img src="images/Method_16x.png"></td>
+          <td><strong>float ReadAsKelvin()</strong></td>
+          <td>Renvoi la valeur de la température en K.</td>
+        </tr>
+        <tr>
+          <td><img src="images/Method_16x.png"></td>
+          <td><strong>float ReadAsRankine()</strong></td>
+          <td>Renvoi la valeur de la température en R.</td>
         </tr>
       </table>
     </section>
