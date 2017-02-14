@@ -212,12 +212,12 @@
           <td><img src="images/Enumerator_16x.png"></td>
           <td><strong>ADD0</strong></td>
           <td>
-            <p>Si la broche ADD0 est connecté à :</p>
+            <p>Si la broche ADD0 est connecté à :</p> 
             <ul>
-              <li>GND : adresse <strong>SLA </strong>= 0x48</li>
-              <li>Vcc : adresse <strong>SLA </strong>= 0x49</li>
-              <li>SDA : adresse <strong>SLA </strong>= 0x4A</li>
-              <li>SCL : adresse <strong>SLA </strong>= 0x4B</li>
+              <li><strong>GND</strong> : adresse <strong>SLA </strong>= 0x48</li>
+              <li><strong>Vcc</strong> : adresse <strong>SLA </strong>= 0x49</li>
+              <li><strong>SDA</strong> : adresse <strong>SLA </strong>= 0x4A</li>
+              <li><strong>SCL</strong> : adresse <strong>SLA </strong>= 0x4B</li>
             </ul>
           </td>
         </tr>
@@ -227,8 +227,8 @@
           <td>
             <p>AlertPolarity permet de régler l'état actif de la broche ALERT.</p>
             <ul>
-              <li>activeLow : broche active à l'état BAS</li>
-              <li>activeHight : broche active à l'état HAUT</li>
+              <li><strong>activeLow</strong> : broche active à l'état BAS</li>
+              <li><strong>activeHight</strong> : broche active à l'état HAUT</li>
             </ul>
           </td>
         </tr>
@@ -241,10 +241,10 @@
               sont produits.
             </p>
             <ul>
-              <li>one</li>
-              <li>two</li>
-              <li>four</li>
-              <li>six</li>
+              <li><strong>one</strong></li>
+              <li><strong>two</strong></li>
+              <li><strong>four</strong></li>
+              <li><strong>six</strong></li>
             </ul>
           </td>
         </tr>
@@ -254,10 +254,10 @@
           <td>
             <p>Fréquence de conversion </p>
             <ul>
-              <li>quarter_Hz : une mesure toutes les quatre secondes</li>
-              <li>one_Hz : une mesure par seconde</li>
-              <li>four_Hz : quatre mesures par seconde (par defaut)</li>
-              <li>height_Hz : huit mesures par seconde</li>
+              <li><strong>quarter_Hz</strong> : une mesure toutes les quatre secondes</li>
+              <li><strong>one_Hz</strong> : une mesure par seconde</li>
+              <li><strong>four_Hz</strong> : quatre mesures par seconde (par defaut)</li>
+              <li><strong>height_Hz</strong> : huit mesures par seconde</li>
             </ul>
           </td>
         </tr>
@@ -267,10 +267,10 @@
           <td>
             <p>Sélection des registres du TMP102</p>
             <ul>
-              <li>Temperature : contient la valeur de la température sur 12bits (par défaut). (lecture)</li>
-              <li>Configuration : Paramétrage du TMP102 (lecture/évriture)</li>
-              <li>T_Low : Contient la valeur limite basse de la température</li>
-              <li>T_High : Contient la valeur limite haute de la température</li>
+              <li><strong>Temperature</strong> : contient la valeur de la température sur 12bits (par défaut). (lecture)</li>
+              <li><strong>Configuration</strong> : Paramétrage du TMP102 (lecture/évriture)</li>
+              <li><strong>T_Low</strong>: Contient la valeur limite basse de la température</li>
+              <li><strong>T_High</strong> : Contient la valeur limite haute de la température</li>
             </ul>
           </td>
         </tr>
@@ -280,11 +280,11 @@
           <td>
             <p></p>
             <ul>
-              <li>ComparatorMode : En mode comparateur, la broche ALERT devient active lorsque la température est égale ou supérieure
+              <li><strong>ComparatorMode</strong> : En mode comparateur, la broche ALERT devient active lorsque la température est égale ou supérieure
                 à la valeur mémorisée dans T_HIGH et génère un nombre consécutif de défauts en accord avec <em>ConsecutiveFaults</em>
                 La broche ALERT reste active jusqu'à ce que la température soit inférieure à la valeur mémorisée dans T_LOW et que le
                 même nombre de défauts est atteint.</li>
-              <li>InterruptMode : en mode interruption, la broche ALERT devient active quand le nombre d'erreurs est
+              <li><strong>InterruptMode</strong> : en mode interruption, la broche ALERT devient active quand le nombre d'erreurs est
                 atteint... (voir le datasheet pour plus d'informations)
               </li>
             </ul>
