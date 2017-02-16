@@ -86,8 +86,12 @@ namespace ToolBoxes
             T_low = 0x02,
             T_high = 0x03
         }
-// -------------------------------------------------------------------------------------------------------------------------------------
-
+        // -------------------------------------------------------------------------------------------------------------------------------------
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="addressSelect">ADD0 connected to Gnd (0x48 default)</param>
+        /// <param name="FreqBusI2C">100kHz (Default)</param>
         public TMP102(ADD0 addressSelect = ADD0.Gnd, int FreqBusI2C = 100)
         {
             ushort _sensorAddress = 0x48;
@@ -107,7 +111,7 @@ namespace ToolBoxes
         /// <returns></returns>
         public bool Init()
         {
-            return Init(false, AlertPolarity.activeHigh, ConversionRate.four_Hz, ThermostatMode.ComparatorMode, ConsecutiveFaults.one, 0, 0);
+            return init(false, AlertPolarity.activeHigh, ConversionRate.four_Hz, ThermostatMode.ComparatorMode, ConsecutiveFaults.one, 0, 0);
         }
         /// <summary>
         /// Initialise the TMP102
@@ -125,7 +129,7 @@ namespace ToolBoxes
             ConversionRate conversionRate = ConversionRate.four_Hz,
             ThermostatMode thermostatMode = ThermostatMode.ComparatorMode)
         {
-            return Init(oneShotMode, alertPolarity, conversionRate, thermostatMode, ConsecutiveFaults.one, 0, 0);
+            return init(oneShotMode, alertPolarity, conversionRate, thermostatMode, ConsecutiveFaults.one, 0, 0);
         }
 
         /// <summary>
@@ -160,8 +164,8 @@ namespace ToolBoxes
         {
             return (ReadAsKelvin() * 9.0f / 5.0f);
         }
-// -------------------------------------------------------------------------------------------------------------------------------------
-        private bool Init(
+        // -------------------------------------------------------------------------------------------------------------------------------------
+        private bool init(
             bool oneShotMode,
             AlertPolarity alertPolarity,
             ConversionRate conversionRate,
