@@ -208,8 +208,8 @@
       <p><strong>Création d'un projet avec l'IDE Visual Studio</strong></p>
       <hr>
       <ol>
-        <li><strong>Utiliser</strong> le gestionnaire de paquets NuGet pour <strong>ajouter</strong> l'assembly <strong>MicroToolsKit</strong>          (disponible sur <a href="https://www.nuget.org/packages/WebGE.MicroToolsKit/" target="_blank">nuget.org</a>)
-          dans le répertoire <em>Références</em> du projet.(clic droit sur <em>Références</em> dans le gestionnaire de solutions
+        <li><strong>Utiliser</strong> le gestionnaire de paquets NuGet pour <strong>ajouter</strong> l'assembly <strong>MicroToolsKit</strong>          (disponible sur <a href="https://www.nuget.org/packages/WebGE.MicroToolsKit/" target="_blank">nuget.org</a>) dans
+          le répertoire <em>Références</em> du projet.(clic droit sur <em>Références</em> dans le gestionnaire de solutions
           de Visual Studio puis <em>Gérer les packages NuGet...</em>)</li>
         <li><strong>Ajouter</strong> l'espace de noms <strong>Microtoolskit.Hardware.Sensors</strong> dans l'en-tête du fichier
           source.
@@ -219,6 +219,22 @@
         <li><strong>Utiliser</strong> la méthode <strong>ReadAsCelcius</strong> pour déclencher une mesure de température et
           obtenir le résultat en °C.</li>
       </ol>
+      <hr>
+      <p><strong>Exemple</strong></p>
+      <em>
+         public static void Main() <br>
+          {<br>
+            float temperature = 0; <br>
+            TMP102 ModuleMesureTemp = new TMP102(); <br>
+            ModuleMesureTemp.Init();<br>
+            <br>
+            while(true)<br>
+            { <br>
+               temperature = ModuleMesureTemp.ReadAsCelcius(); <br>
+               Debug.Print("Temp=" + temperature.ToString("F1") + "degC");<br>
+               Thread.Sleep(1000); <br>
+            } <br>
+      </em>
       <hr>
 
       <p><strong>Constructeurs</strong></p>
