@@ -221,21 +221,21 @@
       </ol>
       <hr>
       <p><strong>Exemple</strong></p>
-      <em>
-         public static void Main() <br>
-          {<br>
-            float temperature = 0; <br>
-            TMP102 ModuleMesureTemp = new TMP102(); <br>
-            ModuleMesureTemp.Init();<br>
-            <br>
-            while(true)<br>
-            { <br>
-               temperature = ModuleMesureTemp.ReadAsCelcius(); <br>
-               Debug.Print("Temp=" + temperature.ToString("F1") + "degC");<br>
-               Thread.Sleep(1000); <br>
-            } <br>
-          }
-      </em>
+      <pre>
+public static void Main() 
+{
+  float temperature = 0; 
+  TMP102 ModuleMesureTemp = new TMP102(); 
+  ModuleMesureTemp.Init();
+
+  while(true)
+  { 
+    temperature = ModuleMesureTemp.ReadAsCelcius(); 
+    Debug.Print("Temp=" + temperature.ToString("F1") + "degC");
+    Thread.Sleep(1000); 
+  } 
+}
+      </pre>
       <hr>
 
       <p><strong>Constructeurs</strong></p>
