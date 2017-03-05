@@ -234,6 +234,7 @@
                Debug.Print("Temp=" + temperature.ToString("F1") + "degC");<br>
                Thread.Sleep(1000); <br>
             } <br>
+          }
       </em>
       <hr>
 
@@ -247,9 +248,11 @@
         <tr>
           <td><img src="images/Method_16x.png"></td>
           <td><strong>TMP102</strong>(<strong>ADD0</strong> <em>pin</em>, <strong>UInt16</strong> <em>Frequency</em> )</td>
-          <td>Instancie un objet "TMP102 ". <br><strong>pin : </strong> égal à ADD0.GND => Addresse <strong>SLA</strong> sur
-            le bus I²C = 0x48. (par défaut)
-            <br><strong>Frequency: </strong>>Féquence du signal SCL = 100kHz. (par défaut)</td>
+          <td>Instancie un objet "TMP102 ". <br><strong>pin : </strong> égal à ADD0.GND =><strong>SLA</strong>= 0x48. (par défaut)<br>
+            <strong>Frequency: </strong>>Féquence du signal SCL = 100kHz. (par défaut)<br><br>
+            <strong>Exemple</strong><br>
+            <em>TMP102 ModuleMesureTemp = new TMP102();</em>
+            </td>
         </tr>
       </table>
 
