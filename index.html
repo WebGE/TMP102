@@ -361,12 +361,15 @@
           <td>
             <p>Initialise le composant avec :</p>
             <ul>
-              <li><strong>addressSelect</strong> : A paramétrer, égale à ADD0.Gnd (par défaut)</li>
+              <li><strong>addressSelect</strong> : A paramétrer,  = ADD0.Gnd (par défaut)</li>
               <li><strong>oneShotMode</strong> = false (par défaut)</li>
               <li><strong>alertPolarity</strong> = AlertPolarity.activeHight (par défaut)</li>
               <li><strong>conversionRate</strong> = ConversionRate.four_Hz (par défaut)</li>
               <li><strong>thermostatMode</strong> = ThermostatMode.ComparatorMode (par défaut)</li>
             </ul>
+            <br>
+            <strong>Exemple</strong><br>
+            <em>ModuleMesureTemp.Init();</em>
           </td>
         </tr>
         <tr>
@@ -392,22 +395,33 @@
         <tr>
           <td><img src="images/Method_16x.png"></td>
           <td><strong>float ReadAsCelcius()</strong></td>
-          <td>Renvoi la température de l'air en °C.</td>
+          <td>Renvoi la température de l'air en °C.</td><br><br>
+          <strong>Exemple</strong><br>
+          <em>temperature = ModuleMesureTemp.ReadAsCelcius();</em>
         </tr>
         <tr>
           <td><img src="images/Method_16x.png"></td>
           <td><strong>float ReadAsFahrenheit()</strong></td>
           <td>Renvoi la température de l'air en °F.</td>
+          <br><br>
+          <strong>Exemple</strong><br>
+          <em>temperature = ModuleMesureTemp.ReadAsFahrenheit();</em>
         </tr>
         <tr>
           <td><img src="images/Method_16x.png"></td>
           <td><strong>float ReadAsKelvin()</strong></td>
           <td>Renvoi la température de l'air en K.</td>
+          <br><br>
+          <strong>Exemple</strong><br>
+          <em>temperature = ModuleMesureTemp.ReadAsKelvin();</em>
         </tr>
         <tr>
           <td><img src="images/Method_16x.png"></td>
           <td><strong>float ReadAsRankine()</strong></td>
           <td>Renvoi la température de l'air en °R.</td>
+         <br><br>
+          <strong>Exemple</strong><br>
+          <em>temperature = ModuleMesureTemp.ReadAsRankine();</em>
         </tr>
       </table>
     </section>
