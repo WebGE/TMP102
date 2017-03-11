@@ -18,7 +18,7 @@
     <header class="inner">
       <a id="forkme_banner" href="https://github.com/WebGE/TMP102">View on GitHub</a>
 
-      <h1 id="project_title">Capteur de température TMP102 (I²C)</h1>
+      <h1 id="project_title">TMP102: Low-Power Digital Temperature Sensor With SMBus™ and Two-Wire Serial Pages</h1>
       <h2 id="project_tagline">Description de la classe <strong><em>TMP102</em></strong> développée en C# sous .NETMF 4.3 pour les cartes Netduino
         et FEZ (PANDA, COBRA...)</h2>
 
@@ -182,15 +182,16 @@
       <p><strong>Organisation des classes</strong> contenues dans MicroToolsKit
         <a href="https://csharpembarquenetduino.wikispaces.com/6.+La+biblioth%C3%A8que+MicroToolsKit" target="_blank">[lien]</a>
       </p>
-      <p><em>Installer cette bibliothèque dans le projet simplifie l'utilisation de cette classe.</em></p>
+       <p><em><strong>Important</strong> : Installer ce nuget dans le projet Visual Studio simplifie l'utilisation de la classe.</em></p>
       <hr>
 
       <h4 id="WIKI">2.3 Les Wikis</h4>
+       Des wikis sont dédiés aux cartes Netduino et GHI Fez. Ils proposent au téléchargement :
       <ul>
-        <li><strong>Fascicules</strong> d'exemples de code pour les cartes <strong>Netduino</strong>.
+        <li><strong>Deux fascicules</strong> d'exemples de code pour les cartes <strong>Netduino</strong>.
           <a href="https://csharpembarquenetduino.wikispaces.com/5.+Les+fascicules+d%27exemples+cod%C3%A9s+en+CSharp " target="_blank">[lien]</a>
         </li>
-        <li><strong>Fascicule</strong> d'exemples de code pour les cartes <strong>FEZ</strong>.
+        <li><strong>Un fascicule</strong> d'exemples de code pour les cartes <strong>FEZ</strong>.
           <a href="https://csharpembarquefez.wikispaces.com/5.+Les+fascicules+d%27exemples+cod%C3%A9s+en+CSharp " target="_blank">[lien]</a>
         </li>
       </ul>
@@ -208,9 +209,12 @@
       <p><strong>Création d'un projet avec l'IDE Visual Studio</strong></p>
       <hr>
       <ol>
-        <li><strong>Utiliser</strong> le gestionnaire de paquets NuGet pour <strong>ajouter</strong> l'assembly <strong>MicroToolsKit</strong>          (disponible sur <a href="https://www.nuget.org/packages/WebGE.MicroToolsKit/" target="_blank">nuget.org</a>) dans
+         <li><strong>Créer </strong>un nouveau projet en suivant la démarche décrite dans le chapitre <em>"Premier programme en C# étape par étape"</em>          du Wiki dédié à une carte <strong>Netduino</strong> ou du Wiki dédié à une carte <strong>Fez. </strong>Ces Wikis
+          sont accessibles
+          <a href="https://csharpembarquenetduino.wikispaces.com/6.+MicroToolsKit+library" target="_blank">ici</a>.</li>
+        <li><strong>Utiliser</strong> le gestionnaire de paquets NuGet pour <strong>ajouter</strong> l'assembly <strong>MicroToolsKit</strong>          (<a href="https://www.nuget.org/packages/WebGE.MicroToolsKit/" target="_blank">nuget.org</a>) dans
           le répertoire <em>Références</em> du projet.(clic droit sur <em>Références</em> dans le gestionnaire de solutions
-          de Visual Studio puis <em>Gérer les packages NuGet...</em>)</li>
+          de Visual Studio puis <em>Gérer les packages NuGet... </em><strong>Installer</strong> le paquet.)</li>
         <li><strong>Ajouter</strong> l'espace de noms <strong>Microtoolskit.Hardware.Sensors</strong> dans l'en-tête du fichier
           source.
         </li>
@@ -222,18 +226,29 @@
       <hr>
       <p><strong>Exemple</strong></p>
       <pre>
-public static void Main() 
-{
-  float temperature = 0; 
-  TMP102 ModuleMesureTemp = new TMP102(); 
-  ModuleMesureTemp.Init();
+using System.Threading;
+using Microsoft.SPOT;
 
-  while(true)
-  { 
-    temperature = ModuleMesureTemp.ReadAsCelcius(); 
-    Debug.Print("Temp=" + temperature.ToString("F1") + "degC");
-    Thread.Sleep(1000); 
-  } 
+using Microtoolskit.Hardware.Sensors;
+
+namespace test
+{
+    public class Program
+    {
+        public static void Main()
+        {
+            float temperature = 0;
+            TMP102 ModuleMesureTemp = new TMP102();
+            ModuleMesureTemp.Init();
+
+            while (true)
+            {
+                temperature = ModuleMesureTemp.ReadAsCelcius();
+                Debug.Print("Temp=" + temperature.ToString("F1") + "degC");
+                Thread.Sleep(1000);
+            }
+        }
+    }
 }
       </pre>
       <hr>
