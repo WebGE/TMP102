@@ -1,11 +1,7 @@
-﻿using System;
-using System.Net;
-using System.Net.Sockets;
-using System.Threading;
+﻿using System.Threading;
 using Microsoft.SPOT;
-using Microsoft.SPOT.Hardware;
-using SecretLabs.NETMF.Hardware;
-using SecretLabs.NETMF.Hardware.Netduino;
+
+using Microtoolskit.Hardware.Sensors;
 
 namespace Netduino
 {
@@ -13,10 +9,17 @@ namespace Netduino
     {
         public static void Main()
         {
-            // write your code here
+            TMP102 CptTMP102 = new TMP102();
+            CptTMP102.Init();
 
+            while (true)
+            {
+                float temperature = CptTMP102.ReadAsCelcius();
+                Debug.Print("Temperature: " + temperature.ToString("F1") + " C");
 
+                // Sleep for 1000 milliseconds
+                Thread.Sleep(1000);
+            }
         }
-
     }
 }

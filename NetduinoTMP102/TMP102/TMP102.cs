@@ -216,7 +216,10 @@ namespace ToolBoxes
 
             return (bytesTransfered == 3);
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         private float Read()
         {
             int bytesTransfered;
@@ -266,7 +269,10 @@ namespace ToolBoxes
             }
             return _temperature;
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         private int ReadRegister()
         {
             int transferredByte = 0;
@@ -279,7 +285,10 @@ namespace ToolBoxes
             BusI2C.Dispose();
             return transferredByte;
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         private int WriteRegister()
         {
             int transferredByte = 0;

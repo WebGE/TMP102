@@ -6,9 +6,9 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("TMP102")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Low-Power Digital Temperature Sensor With SMBus™ and Two-Wire Serial Pages class")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("WebGe")]
 [assembly: AssemblyProduct("TMP102")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
@@ -21,5 +21,5 @@ using System.Runtime.InteropServices;
 //      Build Number
 //      Revision
 //
-[assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: AssemblyVersion("1.4.3.1")]
+[assembly: AssemblyFileVersion("1.4.3.1")]
