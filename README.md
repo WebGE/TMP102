@@ -36,6 +36,7 @@ This class is also in the <a href="https://www.nuget.org/packages/WEBGE.Microtoo
 </ul>
 
 <strong>Assembly</strong>
+-------------------------
 <img src="img/TMP102.jpg" align="center" />
 
 <strong>Keywords</strong>
