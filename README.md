@@ -1,5 +1,7 @@
 #TMP102
 
+<strong>Description</strong>
+-------------------------------------
 Source code.
 
 A <strong>.NETMF 4.3 class</strong> write for a TMP102 circuit : <strong>Low-Power Digital Temperature Sensor With SMBus™ and Two-Wire Serial Pages class</strong>. 
