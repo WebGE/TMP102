@@ -25,10 +25,10 @@ This class is also in the <a href="https://www.nuget.org/packages/WEBGE.Microtoo
 <strong> Visual Studio solution</strong>
 -------------------------------------
 <ul>
-<li><strong>MCP342x</strong>
+<li><strong>TMP102</strong>
 <ul>
-<li><strong>MCP342x</strong> : .NetMF class</li>
-<img src="img/MCP342x.PNG" />
+<li><strong>TMP102</strong> : .NetMF class</li>
+<img src="img/TMP102.PNG" />
 <li><strong>Netduino</strong> : class test program for Netduino board</li>
 <li><strong>FezPanda</strong> : class test program for Fez Panda board</li>
 </ul>
