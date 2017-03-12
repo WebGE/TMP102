@@ -1,22 +1,47 @@
 #TMP102
 
-Source code of the TMP102 <strong>NETMF class</strong> contained in the <a href="https://www.nuget.org/packages/WEBGE.Microtoolskit/" target="_blank">MicroToolsKit</a> <strong>library</strong>. Download at <a href="https://www.nuget.org" target="_blank">nuget.com</a>
+Source code.
 
-This class is for a TMP102 circuit : <strong>Low-Power Digital Temperature Sensor With SMBus and Two-Wire Serial
-Interface in SOT563</strong>.
+A <strong>.NETMF 4.3 class</strong> write for a TMP102 circuit : <strong>Low-Power Digital Temperature Sensor With SMBus™ and Two-Wire Serial Pages class</strong>. 
 
+This class is also in the <a href="https://www.nuget.org/packages/WEBGE.Microtoolskit/" target="_blank">MicroToolsKit</a> <strong>library</strong>. Download at <a href="https://www.nuget.org" target="_blank">nuget.com</a>
 
-<strong>Tags</strong>: I²C Bus, Netduino, FEZ, PANDA, COBRA, C#, NETMF, Visual Studio.
+ <img src="img/nuget.JPG" align="center" />
+ 
+<strong>Hardware</strong>
+---------------------
+<strong> Targets </strong>: Netduino, Netduino plus 2, Netduino 3, FEZ PANDA 3 et COBRA 3.
 
-<strong>Target</strong>: Netduino, Netduino plus 2, Netduino 3, FEZ PANDA 3 et COBRA 3.
+<strong>Software</strong>
+---------------------
+<ul>
+<li><strong>Language</strong> : C#</li>
+<li><strong>Framework used</strong> : .NETMF 4.3</li>
+<li><strong>IDE</strong> : Visual Studio Community 2015</li>
+<li><strong>xml</strong> : documentation inside class</li> 
+<li><strong>Exception</strong> : if transaction failed</li>
+</ul>
 
-<strong>IDE</strong> : Visual Studio Community.
+<strong> Visual Studio solution</strong>
+-------------------------------------
+<ul>
+<li><strong>MCP342x</strong>
+<ul>
+<li><strong>MCP342x</strong> : .NetMF class</li>
+<img src="img/MCP342x.PNG" />
+<li><strong>Netduino</strong> : class test program for Netduino board</li>
+<li><strong>FezPanda</strong> : class test program for Fez Panda board</li>
+</ul>
+</li>
+</ul>
 
-<strong>Language</strong> : C#.
+<strong>Keywords</strong>
+----------------------------
+I²C Bus, Netduino, FEZ, PANDA, COBRA, C#, NETMF, Visual Studio.
 
-<strong>Framework</strong> : .NETMF 4.3
-
+<strong>To get started<strong>
+--------------------
+See <a href="http://webge.github.io/TMP102/" target="_blank">TMP102 GitHub Pages</a>.
 <hr>
-See <a href="http://webge.github.io/TMP102/" target="_blank">TMP102 GitHub Pages</a> too get started.
 
-Maintened by <a href="mailto:philippemariano@gmail.com">Philippe Mariano</a>
+Maintened by <a href="mailto:philippemariano@gmail.com">WebGe</a>
