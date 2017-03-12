@@ -49,6 +49,10 @@ To come up
 ----------------------------
 I²C Bus, Netduino, FEZ, PANDA, COBRA, C#, NETMF, Visual Studio.
 
+<strong>Todo list</strong>
+----------------------------
+Add exception if transaction failed
+
 <strong>To get started<strong>
 --------------------
 See <a href="http://webge.github.io/TMP102/" target="_blank">TMP102 GitHub Pages</a>.
