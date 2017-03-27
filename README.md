@@ -4,7 +4,7 @@
 -------------------------------------
 Source code.
 
-A <strong>.NETMF 4.3 class</strong> write for a TMP102 circuit : <strong>Low-Power Digital Temperature Sensor With SMBus™ and Two-Wire Serial Pages class</strong>. 
+A <strong>.NETMF v4.3 class</strong> write for a TMP102 circuit : <strong>Low-Power Digital Temperature Sensor With SMBus™ and Two-Wire Serial Pages class</strong>. 
 
 This class is also in the <a href="https://www.nuget.org/packages/WEBGE.Microtoolskit/" target="_blank">MicroToolsKit</a> <strong>library</strong>. Download at <a href="https://www.nuget.org" target="_blank">nuget.com</a>
 
