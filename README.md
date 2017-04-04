@@ -30,7 +30,7 @@ This class is also in the <a href="https://www.nuget.org/packages/WEBGE.Microtoo
 <li><strong>TMP102</strong>
 <ul>
 <li><strong>TMP102</strong> : .NetMF class</li>
-<img src="img/TMP102.PNG" />
+<img src="img/TMP102.png" />
 <li><strong>Netduino</strong> : class test program for Netduino board</li>
 <li><strong>FezPanda</strong> : class test program for Fez Panda board</li>
 </ul>
