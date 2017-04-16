@@ -59,12 +59,15 @@ Add exception if transaction failed
 
 <strong>To get started<strong>
 --------------------
-See <a href="http://webge.github.io/TMP102/" target="_blank">TMP102 GitHub Pages</a>.
+See <a href="http://webge.github.io/TMP102/" target="_blank">TMP102 GitHub Pages</a> (in French).
+
+<strong>Wiki</strong>
+--------------------
+See <a href="https://csharpembarquenetduino.wikispaces.com/Home" target="_blank">Netduino et FEZ</a> (in French).
 
 <strong>Project site</strong>
 --------------------
-<a href ="https://csharpembarquenetduino.wikispaces.com/6.+MicroToolsKit+library">MicroToolsKit library</a>
-
+<a href ="https://csharpembarquenetduino.wikispaces.com/6.+MicroToolsKit+library">MicroToolsKit library</a> (in English).
 <hr>
 
 Maintened by <a href="mailto:philippemariano@gmail.com">WebGe</a>
