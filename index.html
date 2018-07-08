@@ -19,8 +19,10 @@
       <a id="forkme_banner" href="https://github.com/WebGE/TMP102">View on GitHub</a>
 
       <h1 id="project_title">TMP102: Low-Power Digital Temperature Sensor With SMBus™ and Two-Wire Serial Pages</h1>
-      <h2 id="project_tagline">Description de la classe <strong><em>TMP102</em></strong> développée en C# sous .NETMF 4.3 pour les cartes Netduino
-        et FEZ (PANDA, COBRA...)</h2>
+      <h2 id="project_tagline">Description de la classe
+        <strong>
+          <em>TMP102</em>
+        </strong> développée en C# sous .NETMF 4.3 pour les cartes Netduino et FEZ (PANDA, COBRA...)</h2>
 
       <section id="downloads">
         <a class="zip_download_link" href="https://github.com/WebGE/TMP102/zipball/master">Download this project as a .zip file</a>
@@ -38,25 +40,42 @@
         <li>LE MATERIEL
           <ol>
             <li>Le capteur TMP102: Low-Power Digital Temperature Sensor With SMBus™ and Two-Wire Serial Pages</li>
-            <li><a href="#DUINO">Les cartes Netduino</a></li>
-            <li><a href="#FEZ">Les cartes FEZ</a> </li>
+            <li>
+              <a href="#DUINO">Les cartes Netduino</a>
+            </li>
+            <li>
+              <a href="#FEZ">Les cartes FEZ</a>
+            </li>
           </ol>
         </li>
-        <li><a href="#LOG">LE LOGICIEL</a>
+        <li>
+          <a href="#LOG">LE LOGICIEL</a>
           <ol>
-            <li><a href="#REP">Contenu du répertoire proposé au téléchargement</a></li>
-            <li><a href="#NUGET">Le NuGet MicroToolsKit</a></li>
-            <li><a href="#WIKI">Le wiki .NetMF v4.3</a></li>
-            <li><a href="#DESC">Description et utilisation de la classe TMP102</a></li>
+            <li>
+              <a href="#REP">Contenu du répertoire proposé au téléchargement</a>
+            </li>
+            <li>
+              <a href="#NUGET">Le NuGet MicroToolsKit</a>
+            </li>
+            <li>
+              <a href="#WIKI">Le wiki .NetMF v4.3</a>
+            </li>
+            <li>
+              <a href="#DESC">Description et utilisation de la classe TMP102</a>
+            </li>
           </ol>
         </li>
         <li>LES FASCICULES
-					<ol>
-						<li><a href="https://csharpembarquenetduino.wikispaces.com/5a.+Les+fascicules+d%27exemples++cod%C3%A9s+en+CSharp+pour+la+carte+Netduino" target="_blank">Exemples de code pour les cartes Netduino</a></li>
-						<li><a href="https://csharpembarquenetduino.wikispaces.com/5b.+Le+fascicule+d%27exemples++cod%C3%A9s+en+CSharp+pour+les+cartes+Fez+%28PANDA+3%2C+etc%29" target="_blank">Exemples de code pour les cartes FEZ</a> </li>
-					</ol>
-				</li>
-				<li><a href="https://csharpembarquenetduino.wikispaces.com/6.+MicroToolsKit+library" target="_blank">La page du projet MicroToolsKit</a></li>
+          <ol>
+            <li>
+              <a href="http://webge.dyndns-server.com/dokuwiki/doku.php?id=netmf43:accueilnetmf" target="_blank">Exemples codés en C# pour les cartes Netduino et Fez (Panda 3, BrainPad)</a>
+            </li>
+          </ol>
+        </li>
+        <li>
+          <a href="http://webge.dyndns-server.com/dokuwiki/doku.php?id=netmf43:6_microtoolskit" target="_blank">La page du projet MicroToolsKit</a>
+        </li>
+
       </ol>
       <hr>
       <h3>1. LE MATERIEL</h3>
@@ -64,19 +83,36 @@
       <h4>1.1 Le capteur TMP102: Low-Power Digital Temperature Sensor With SMBus™ and Two-Wire Serial Pages.</h4>
       <hr>
       <ul>
-        <li><strong>Présentation</strong></li>
+        <li>
+          <strong>Présentation</strong>
+        </li>
         <p>Le capteur TMP102 mesure la température avec une précision de 0,5°C de -40°C à 125°C et communique l'information
           via une interface I²C.
         </p>
-        <li><strong>Schéma interne du composant</strong></li>
-        <p align="center"><img src="images/fonctionnelTMP102.png"></p>
-        <li><strong>Adressage</strong></li>
-        <p align="center"><img src="images/AdressageTMP102.png" width="50%" height="50%"></p>
-        <li><strong>Registres</strong></li>
+        <li>
+          <strong>Schéma interne du composant</strong>
+        </li>
         <p align="center">
-          <img src="images/RegistresTMP102.png" width="50% " height="50% "></p>
-        <li><strong>Documentation: </strong><a href="http://www.ti.com.cn/cn/lit/ds/symlink/tmp102.pdf" target="_blank">pdf</a></li>
-        <li><strong>Distributeur: </strong>
+          <img src="images/fonctionnelTMP102.png">
+        </p>
+        <li>
+          <strong>Adressage</strong>
+        </li>
+        <p align="center">
+          <img src="images/AdressageTMP102.png" width="50%" height="50%">
+        </p>
+        <li>
+          <strong>Registres</strong>
+        </li>
+        <p align="center">
+          <img src="images/RegistresTMP102.png" width="50% " height="50% ">
+        </p>
+        <li>
+          <strong>Documentation: </strong>
+          <a href="http://www.ti.com.cn/cn/lit/ds/symlink/tmp102.pdf" target="_blank">pdf</a>
+        </li>
+        <li>
+          <strong>Distributeur: </strong>
           <a href="http://www.gotronic.fr/art-capteur-de-temperature-tmp102-20226.htm" target="_blank">Go Tronic</a>
         </li>
       </ul>
@@ -84,13 +120,18 @@
       <hr>
       <table width="100% ">
         <tr align="center">
-          <td><strong>SparkFun</strong></td>
+          <td>
+            <strong>SparkFun</strong>
+          </td>
         </tr>
         <tr align="center">
-          <td><img src="images/TMP102.png"></td>
+          <td>
+            <img src="images/TMP102.png">
+          </td>
         </tr>
         <tr align="center">
-          <td><a href="https://www.sparkfun.com/products/13314" target="_blank">Documentation</a> -
+          <td>
+            <a href="https://www.sparkfun.com/products/13314" target="_blank">Documentation</a> -
             <a href="http://cdn.sparkfun.com/datasheets/Sensors/Temp/SparkFun_Digital_Temperature_Sensor_Breakout_-_TMP102.pdf">Schéma</a>
           </td>
         </tr>
@@ -101,31 +142,54 @@
       <h5>Secret Labs</h5>
       <hr>
       <ul>
-        <li><strong>Microcontrôleur</strong> : STM32F405RG 32 bits à architecture Cortex-M4 cadencé à 168 MHz.</li>
-        <li><strong>RAM</strong> : 164KB+.</li>
-        <li><strong>Flash</strong> : 1408KB.</li>
-        <li><strong>Port Ethernet : </strong> 10/100Mbps (Wifi:802.11b/g/n)*.</li>
-        <li><strong>E/S numériques</strong> : 22</li>
-        <li><strong>Entrées analogiques</strong> : 6</li>
-        <li><strong>Stockage</strong>: carte µSD</li>
-        <li><strong>IDE</strong> : Microsoft Visual Studio</li>
-        <li><strong>Framework</strong> : .NETMF 4.3</li>
-        <li><strong>Langages de programmation</strong> : C#, VB</li>
-        <li><strong>Compatibilité</strong> : shield Arduino, Gadgeteer</li>
+        <li>
+          <strong>Microcontrôleur</strong> : STM32F405RG 32 bits à architecture Cortex-M4 cadencé à 168 MHz.</li>
+        <li>
+          <strong>RAM</strong> : 164KB+.</li>
+        <li>
+          <strong>Flash</strong> : 1408KB.</li>
+        <li>
+          <strong>Port Ethernet : </strong> 10/100Mbps (Wifi:802.11b/g/n)*.</li>
+        <li>
+          <strong>E/S numériques</strong> : 22</li>
+        <li>
+          <strong>Entrées analogiques</strong> : 6</li>
+        <li>
+          <strong>Stockage</strong>: carte µSD</li>
+        <li>
+          <strong>IDE</strong> : Microsoft Visual Studio</li>
+        <li>
+          <strong>Framework</strong> : .NETMF 4.3</li>
+        <li>
+          <strong>Langages de programmation</strong> : C#, VB</li>
+        <li>
+          <strong>Compatibilité</strong> : shield Arduino, Gadgeteer</li>
       </ul>
       <table>
         <tr>
-          <td><img src="images/netduino3ethernet.png" alt="Netduino plus 2" target="_blank" /></td>
-          <td><img src="images/inputandoutput.png" alt="Netduino 3 wifi" target="_blank" /></td>
+          <td>
+            <img src="images/netduino3ethernet.png" alt="Netduino plus 2" target="_blank" />
+          </td>
+          <td>
+            <img src="images/inputandoutput.png" alt="Netduino 3 wifi" target="_blank" />
+          </td>
         </tr>
         <tr>
-          <td align="center"><strong>Netduino 3 Ethernet</strong></td>
-          <td align="center"><strong>Netduino 3 wifi*</strong></td>
+          <td align="center">
+            <strong>Netduino 3 Ethernet</strong>
+          </td>
+          <td align="center">
+            <strong>Netduino 3 wifi*</strong>
+          </td>
         </tr>
       </table>
       <ul>
-        <li><strong>Sites à consulter</strong> : <a href="http://netduino.com/netduinoplus2/specs.htm" target="_blank">Netduino</a></li>
-        <li><strong>Distributeurs</strong> :
+        <li>
+          <strong>Sites à consulter</strong> :
+          <a href="https://www.wildernesslabs.co/Netduino" target="_blank">Netduino</a>
+        </li>
+        <li>
+          <strong>Distributeurs</strong> :
           <a href="http://www.mouser.fr/Search/Refine.aspx?Keyword=netduino" target="_blank">Mouser Electronics</a>
         </li>
       </ul>
@@ -135,35 +199,62 @@
       <h5>GHI Electonics (Extrait)</h5>
       <hr>
       <ul>
-        <li><strong>Microcontrôleur</strong> : 180 MHz 32-bit ARM Cortex-M4.(120 MHz 32-bit ARM Cortex-M3 )*</li>
-        <li><strong>SoC(SoM)*</strong> : <a href="https://www.ghielectronics.com/catalog/product/501" target="_blank">G80</a>
-          <a href="https://www.ghielectronics.com/catalog/product/373" target="_blank">G120*</a>
+        <li>
+          <strong>Microcontrôleur</strong> : 180 MHz 32-bit ARM Cortex-M4.(120 MHz 32-bit ARM Cortex-M3 )*</li>
+        <li>
+          <strong>SoC(SoM)*</strong> :
+          <a href="https://www.ghielectronics.com/products/scm/g80" target="_blank">G80</a>
+          <a href="https://www.ghielectronics.com/products/scm/g120e" target="_blank">G120*</a>
         </li>
-        <li><strong>RAM</strong> : 156 KB(2.87 MB)*.</li>
-        <li><strong>Flash</strong> : 256 KB (13.67 MB)*.</li>
-        <li><strong>E/S numériques</strong> : 53(60)*</li>
-        <li><strong>Entrées analogiques</strong> : 16(8)*</li>
-        <li><strong>Réseaux : </strong> Ethernet TCP/IP, WiFi, and SSL.</li>
-        <li><strong>Stockage</strong>: carte µSD</li>
-        <li><strong>IDE</strong> : Microsoft Visual Studio</li>
-        <li><strong>Framework</strong> : .NETMF 4.3</li>
-        <li><strong>Langages de programmation</strong> : C#, VB</li>
+
+        <li>
+          <strong>RAM</strong> : 156 KB(2.87 MB)*.</li>
+        <li>
+          <strong>Flash</strong> : 256 KB (13.67 MB)*.</li>
+        <li>
+          <strong>E/S numériques</strong> : 53(60)*</li>
+        <li>
+          <strong>Entrées analogiques</strong> : 16(8)*</li>
+        <li>
+          <strong>Réseaux : </strong> Ethernet TCP/IP, WiFi, and SSL.</li>
+        <li>
+          <strong>Stockage</strong>: carte µSD</li>
+        <li>
+          <strong>IDE</strong> : Microsoft Visual Studio</li>
+        <li>
+          <strong>Framework</strong> : .NETMF 4.3</li>
+        <li>
+          <strong>Langages de programmation</strong> : C#, VB</li>
       </ul>
 
       <table>
         <tr>
-          <td><img src="images/panda3.png " alt="PANDA III" /></td>
-          <td><img src="images/cobra3.png " alt="COBRA III" /></td>
+          <td>
+            <img src="images/panda3.png " alt="PANDA III" />
+          </td>
+          <td>
+            <img src="images/cobra3.png " alt="COBRA III" />
+          </td>
         </tr>
         <tr>
-          <td align="center"><strong>PANDA III</strong></td>
-          <td align="center"><strong>COBRA III* (compatible Gadgeteer)</strong></td>
+          <td align="center">
+            <strong>PANDA III</strong>
+          </td>
+          <td align="center">
+            <strong>COBRA III* (compatible Gadgeteer)</strong>
+          </td>
         </tr>
       </table>
 
       <ul>
-        <li><strong>Sites à consulter</strong> : <a href="https://www.ghielectronics.com/" target="_blank">GHI ELECTRONICS</a></li>
-        <li><strong>Distributeurs</strong> : <a href="http://www.mouser.fr " target="_blank">Mouser Electronics</a></li>
+        <li>
+          <strong>Sites à consulter</strong> :
+          <a href="https://www.ghielectronics.com/" target="_blank">GHI ELECTRONICS</a>
+        </li>
+        <li>
+          <strong>Distributeurs</strong> :
+          <a href="http://www.mouser.fr " target="_blank">Mouser Electronics</a>
+        </li>
       </ul>
 
       <hr>
@@ -172,64 +263,107 @@
 
       <h4 id="REP">2.1 Contenu du répertoire proposé au téléchargement</h4>
       <hr>
-      <p>Le répertoire proposé au téléchargement (au format zip ou tar.gz) contient la solution <strong>NetduinoTMP102</strong>        composée :
+      <p>Le répertoire proposé au téléchargement (au format zip ou tar.gz) contient la solution
+        <strong>NetduinoTMP102</strong> composée :
       </p>
       <ul>
-        <li>Du projet <strong>TMP102 </strong>: le <strong>code source</strong> de la classe <em>TMP102</em>.</li>
-        <li>Du projet <strong>TestNetduinoTMP102 </strong>: un exemple d'utilisation de cette classe.</li>
+        <li>Du projet
+          <strong>TMP102 </strong>: le
+          <strong>code source</strong> de la classe
+          <em>TMP102</em>.</li>
+        <li>Du projet
+          <strong>TestNetduinoTMP102 </strong>: un exemple d'utilisation de cette classe.</li>
       </ul>
       <hr>
 
       <h4 id="NUGET">2.2 Le NuGet MicroToolsKit</h4>
-      <p>La dernière version <strong>compilée</strong> de la classe <strong>TMP102</strong> se situe dans la bibliothèque
-        <strong>MicroToolsKit</strong> disponible sur <a href="https://www.nuget.org/packages/WebGE.MicroToolsKit/ " target="_blank">nuget.org</a>.</p>
-      <p align="center"><img src="images/NuGet-large.png" /></p>
-      <p><strong>Organisation des classes</strong> contenues dans MicroToolsKit
+      <p>La dernière version
+        <strong>compilée</strong> de la classe
+        <strong>TMP102</strong> se situe dans la bibliothèque
+        <strong>MicroToolsKit</strong> disponible sur
+        <a href="https://www.nuget.org/packages/WebGE.MicroToolsKit/ " target="_blank">nuget.org</a>.</p>
+      <p align="center">
+        <img src="images/NuGet-large.png" />
+      </p>
+      <p>
+        <strong>Organisation des classes</strong> contenues dans MicroToolsKit
         <a href="http://webge.dyndns-server.com/dokuwiki/doku.php?id=netmf43:6_microtoolskit" target="_blank">[lien]</a>
       </p>
-       <p><em><strong>Important</strong> : Installer ce nuget dans le projet Visual Studio simplifie l'utilisation de la classe.</em></p>
+      <p>
+        <em>
+          <strong>Important</strong> : Installer ce nuget dans le projet Visual Studio simplifie l'utilisation de la classe.</em>
+      </p>
       <hr>
 
-     <h4 id="WIKI">2.3 Le wiki .NetMF v4.3</h4>
-			<ul>
-				Un wiki est dédié au <strong>microframework .Net v4.3</strong>. Il propose au téléchargement : 
-<li>Des <strong>exemples</strong> de code pour les cartes <strong>Netduino</strong>, <strong>GHI FEZ (Panda 3 , BrainPad etc.) </strong>. <a href=" http://webge.dyndns-server.com/dokuwiki/doku.php?id=netmf43:accueilnetmf"  target="_blank">[lien]</a></li>
+      <h4 id="WIKI">2.3 Le wiki .NetMF v4.3</h4>
+      <ul>
+        Un wiki est dédié au
+        <strong>microframework .Net v4.3</strong>. Il propose au téléchargement :
+        <li>Des
+          <strong>exemples</strong> de code pour les cartes
+          <strong>Netduino</strong>,
+          <strong>GHI FEZ (Panda 3 , BrainPad etc.) </strong>.
+          <a href=" http://webge.dyndns-server.com/dokuwiki/doku.php?id=netmf43:accueilnetmf" target="_blank">[lien]</a>
+        </li>
 
-			</ul>
+      </ul>
 
       <hr>
 
       <h4 id="DESC">2.4 Description et utilisation de la classe TMP102</h4>
       <ul>
-        <li><strong>Rôle: </strong>Contrôler un capteur de température TMP102 via un bus I²C.</li>
-        <li><strong>Assembly: </strong> <em>MicroToolsKit</em> (disponible sur
+        <li>
+          <strong>Rôle: </strong>Contrôler un capteur de température TMP102 via un bus I²C.</li>
+        <li>
+          <strong>Assembly: </strong>
+          <em>MicroToolsKit</em> (disponible sur
           <a href="https://www.nuget.org/packages/WebGE.MicroToolsKit/" target="_blank">nuget.org</a>)</li>
-        <li><strong>Espace de noms: </strong><em>Microtoolskit.Hardware.Sensors</em></li>
+        <li>
+          <strong>Espace de noms: </strong>
+          <em>Microtoolskit.Hardware.Sensors</em>
+        </li>
       </ul>
       <hr>
 
-      <p><strong>Création d'un projet avec l'IDE Visual Studio</strong></p>
+      <p>
+        <strong>Création d'un projet avec l'IDE Visual Studio</strong>
+      </p>
       <hr>
       <ol>
-         <li>
+        <li>
           <strong>Créer </strong>un nouveau projet en suivant la démarche décrite dans le chapitre
-          <em>"Premier programme en C# étape par étape"</em> avec à une carte <strong>Netduino</strong> ou avec une carte
+          <em>"Premier programme en C# étape par étape"</em> avec à une carte
+          <strong>Netduino</strong> ou avec une carte
           <strong>Fez (Panda 3, BrainPad etc)</strong>.
           <a href=" http://webge.dyndns-server.com/dokuwiki/doku.php?id=netmf43:accueilnetmf " target="_blank">[lien]</a>
-</li>
-        <li><strong>Utiliser</strong> le gestionnaire de paquets NuGet pour <strong>ajouter</strong> l'assembly <strong>MicroToolsKit</strong>          (<a href="https://www.nuget.org/packages/WebGE.MicroToolsKit/" target="_blank">nuget.org</a>) dans
-          le répertoire <em>Références</em> du projet.(clic droit sur <em>Références</em> dans le gestionnaire de solutions
-          de Visual Studio puis <em>Gérer les packages NuGet... </em><strong>Installer</strong> le paquet.)</li>
-        <li><strong>Ajouter</strong> l'espace de noms <strong>Microtoolskit.Hardware.Sensors</strong> dans l'en-tête du fichier
-          source.
         </li>
-        <li><strong>Créer</strong> un objet en utilisant le constructeur <em>TMP102</em> et les paramètres appropriés.</li>
-        <li><strong>Initialiser</strong> le circuit avec la méthode <strong>Init</strong> et les paramètres appropriés.</li>
-        <li><strong>Utiliser</strong> la méthode <strong>ReadAsCelcius</strong> pour déclencher une mesure de température et
-          obtenir le résultat en °C.</li>
+        <li>
+          <strong>Utiliser</strong> le gestionnaire de paquets NuGet pour
+          <strong>ajouter</strong> l'assembly
+          <strong>MicroToolsKit</strong> (
+          <a href="https://www.nuget.org/packages/WebGE.MicroToolsKit/" target="_blank">nuget.org</a>) dans le répertoire
+          <em>Références</em> du projet.(clic droit sur
+          <em>Références</em> dans le gestionnaire de solutions de Visual Studio puis
+          <em>Gérer les packages NuGet... </em>
+          <strong>Installer</strong> le paquet.)</li>
+        <li>
+          <strong>Ajouter</strong> l'espace de noms
+          <strong>Microtoolskit.Hardware.Sensors</strong> dans l'en-tête du fichier source.
+        </li>
+        <li>
+          <strong>Créer</strong> un objet en utilisant le constructeur
+          <em>TMP102</em> et les paramètres appropriés.</li>
+        <li>
+          <strong>Initialiser</strong> le circuit avec la méthode
+          <strong>Init</strong> et les paramètres appropriés.</li>
+        <li>
+          <strong>Utiliser</strong> la méthode
+          <strong>ReadAsCelcius</strong> pour déclencher une mesure de température et obtenir le résultat en °C.</li>
       </ol>
       <hr>
-      <p><strong>Exemple</strong></p>
+      <p>
+        <strong>Exemple</strong>
+      </p>
       <pre>
 using System.Threading;
 using Microsoft.SPOT;
@@ -258,192 +392,331 @@ namespace test
       </pre>
       <hr>
 
-      <p><strong>Constructeurs</strong></p>
+      <p>
+        <strong>Constructeurs</strong>
+      </p>
       <table width="100%">
         <tr>
           <td></td>
-          <td><strong>Syntaxe</strong></td>
-          <td><strong>Description</strong></td>
+          <td>
+            <strong>Syntaxe</strong>
+          </td>
+          <td>
+            <strong>Description</strong>
+          </td>
         </tr>
         <tr>
-          <td><img src="images/Method_16x.png"></td>
-          <td><strong>TMP102</strong>(<strong>ADD0</strong> <em>pin</em>, <strong>UInt16</strong> <em>Frequency</em> )</td>
-          <td>Instancie un objet "TMP102 ". <br><strong>pin : </strong> égal à ADD0.GND =><strong>SLA</strong>= 0x48. (par défaut)<br>
-            <strong>Frequency: </strong>>Féquence du signal SCL = 100kHz. (par défaut)<br><br>
-            <strong>Exemple</strong><br>
+          <td>
+            <img src="images/Method_16x.png">
+          </td>
+          <td>
+            <strong>TMP102</strong>(
+            <strong>ADD0</strong>
+            <em>pin</em>,
+            <strong>UInt16</strong>
+            <em>Frequency</em> )</td>
+          <td>Instancie un objet "TMP102 ".
+            <br>
+            <strong>pin : </strong> égal à ADD0.GND =>
+            <strong>SLA</strong>= 0x48. (par défaut)
+            <br>
+            <strong>Frequency: </strong>>Féquence du signal SCL = 100kHz. (par défaut)
+            <br>
+            <br>
+            <strong>Exemple</strong>
+            <br>
             <em>TMP102 ModuleMesureTemp = new TMP102();</em>
           </td>
         </tr>
       </table>
 
-      <p><strong>Enumérations</strong></p>
+      <p>
+        <strong>Enumérations</strong>
+      </p>
       <table width="100%">
         <tr>
           <td></td>
-          <td><strong>Syntaxe</strong></td>
-          <td><strong>Description</strong></td>
+          <td>
+            <strong>Syntaxe</strong>
+          </td>
+          <td>
+            <strong>Description</strong>
+          </td>
         </tr>
         <tr>
-          <td><img src="images/Enumerator_16x.png"></td>
-          <td><strong>ADD0</strong></td>
+          <td>
+            <img src="images/Enumerator_16x.png">
+          </td>
+          <td>
+            <strong>ADD0</strong>
+          </td>
           <td>
             <p>Si la broche ADD0 est connecté à :</p>
             <ul>
-              <li><strong>GND</strong> : adresse <strong>SLA </strong>= 0x48</li>
-              <li><strong>Vcc</strong> : adresse <strong>SLA </strong>= 0x49</li>
-              <li><strong>SDA</strong> : adresse <strong>SLA </strong>= 0x4A</li>
-              <li><strong>SCL</strong> : adresse <strong>SLA </strong>= 0x4B</li>
+              <li>
+                <strong>GND</strong> : adresse
+                <strong>SLA </strong>= 0x48</li>
+              <li>
+                <strong>Vcc</strong> : adresse
+                <strong>SLA </strong>= 0x49</li>
+              <li>
+                <strong>SDA</strong> : adresse
+                <strong>SLA </strong>= 0x4A</li>
+              <li>
+                <strong>SCL</strong> : adresse
+                <strong>SLA </strong>= 0x4B</li>
             </ul>
           </td>
         </tr>
         <tr>
-          <td><img src="images/Enumerator_16x.png"></td>
-          <td><strong>AlertPolarity</strong></td>
+          <td>
+            <img src="images/Enumerator_16x.png">
+          </td>
+          <td>
+            <strong>AlertPolarity</strong>
+          </td>
           <td>
             <p>AlertPolarity permet de régler l'état actif de la broche ALERT.</p>
             <ul>
-              <li><strong>activeLow</strong> : broche active à l'état BAS</li>
-              <li><strong>activeHight</strong> : broche active à l'état HAUT</li>
+              <li>
+                <strong>activeLow</strong> : broche active à l'état BAS</li>
+              <li>
+                <strong>activeHight</strong> : broche active à l'état HAUT</li>
             </ul>
           </td>
         </tr>
         <tr>
-          <td><img src="images/Enumerator_16x.png"></td>
-          <td><strong>ConsecutiveFaults</strong></td>
+          <td>
+            <img src="images/Enumerator_16x.png">
+          </td>
+          <td>
+            <strong>ConsecutiveFaults</strong>
+          </td>
           <td>
             <p>Une erreur se produit lorsque la température dépasse les limites fixées par l'utilisateur dans les registres
-              THIGH et TLOW. <em>ConsecutiveFaults</em> active la broche ALERT si un, deux, quatre ou six dépassements se
-              sont produits.
+              THIGH et TLOW.
+              <em>ConsecutiveFaults</em> active la broche ALERT si un, deux, quatre ou six dépassements se sont produits.
             </p>
             <ul>
-              <li><strong>one</strong></li>
-              <li><strong>two</strong></li>
-              <li><strong>four</strong></li>
-              <li><strong>six</strong></li>
+              <li>
+                <strong>one</strong>
+              </li>
+              <li>
+                <strong>two</strong>
+              </li>
+              <li>
+                <strong>four</strong>
+              </li>
+              <li>
+                <strong>six</strong>
+              </li>
             </ul>
           </td>
         </tr>
         <tr>
-          <td><img src="images/Enumerator_16x.png"></td>
-          <td><strong>ConversionRate</strong></td>
+          <td>
+            <img src="images/Enumerator_16x.png">
+          </td>
+          <td>
+            <strong>ConversionRate</strong>
+          </td>
           <td>
             <p>Fréquence de conversion </p>
             <ul>
-              <li><strong>quarter_Hz</strong> : une mesure toutes les quatre secondes</li>
-              <li><strong>one_Hz</strong> : une mesure par seconde</li>
-              <li><strong>four_Hz</strong> : quatre mesures par seconde (par defaut)</li>
-              <li><strong>height_Hz</strong> : huit mesures par seconde</li>
+              <li>
+                <strong>quarter_Hz</strong> : une mesure toutes les quatre secondes</li>
+              <li>
+                <strong>one_Hz</strong> : une mesure par seconde</li>
+              <li>
+                <strong>four_Hz</strong> : quatre mesures par seconde (par defaut)</li>
+              <li>
+                <strong>height_Hz</strong> : huit mesures par seconde</li>
             </ul>
           </td>
         </tr>
         <tr>
-          <td><img src="images/Enumerator_16x.png"></td>
-          <td><strong>Registers</strong></td>
+          <td>
+            <img src="images/Enumerator_16x.png">
+          </td>
+          <td>
+            <strong>Registers</strong>
+          </td>
           <td>
             <p>Sélection des registres du TMP102</p>
             <ul>
-              <li><strong>Temperature</strong> : contient la valeur de la température sur 12bits (par défaut). (lecture)</li>
-              <li><strong>Configuration</strong> : Paramétrage du TMP102 (lecture/évriture)</li>
-              <li><strong>T_Low</strong>: Contient la valeur limite basse de la température</li>
-              <li><strong>T_High</strong> : Contient la valeur limite haute de la température</li>
+              <li>
+                <strong>Temperature</strong> : contient la valeur de la température sur 12bits (par défaut). (lecture)</li>
+              <li>
+                <strong>Configuration</strong> : Paramétrage du TMP102 (lecture/évriture)</li>
+              <li>
+                <strong>T_Low</strong>: Contient la valeur limite basse de la température</li>
+              <li>
+                <strong>T_High</strong> : Contient la valeur limite haute de la température</li>
             </ul>
           </td>
         </tr>
         <tr>
-          <td><img src="images/Enumerator_16x.png"></td>
-          <td><strong>ThermostatMode</strong></td>
+          <td>
+            <img src="images/Enumerator_16x.png">
+          </td>
+          <td>
+            <strong>ThermostatMode</strong>
+          </td>
           <td>
             <p></p>
             <ul>
-              <li><strong>ComparatorMode</strong> : En mode comparateur, la broche ALERT devient active lorsque la température
-                est égale ou supérieure à la valeur mémorisée dans T_HIGH et génère un nombre consécutif de défauts en accord
-                avec <em>ConsecutiveFaults</em> La broche ALERT reste active jusqu'à ce que la température soit inférieure
-                à la valeur mémorisée dans T_LOW et que le même nombre de défauts est atteint.</li>
-              <li><strong>InterruptMode</strong> : en mode interruption, la broche ALERT devient active quand le nombre d'erreurs
-                est atteint... (voir le datasheet pour plus d'informations)
+              <li>
+                <strong>ComparatorMode</strong> : En mode comparateur, la broche ALERT devient active lorsque la température est
+                égale ou supérieure à la valeur mémorisée dans T_HIGH et génère un nombre consécutif de défauts en accord
+                avec
+                <em>ConsecutiveFaults</em> La broche ALERT reste active jusqu'à ce que la température soit inférieure à la valeur
+                mémorisée dans T_LOW et que le même nombre de défauts est atteint.</li>
+              <li>
+                <strong>InterruptMode</strong> : en mode interruption, la broche ALERT devient active quand le nombre d'erreurs est
+                atteint... (voir le datasheet pour plus d'informations)
               </li>
             </ul>
           </td>
         </tr>
       </table>
 
-      <p><strong>Méthodes</strong></p>
+      <p>
+        <strong>Méthodes</strong>
+      </p>
       <table width="100%">
         <tr>
           <td></td>
-          <td><strong>Syntaxe</strong></td>
-          <td><strong>Description</strong></td>
+          <td>
+            <strong>Syntaxe</strong>
+          </td>
+          <td>
+            <strong>Description</strong>
+          </td>
         </tr>
         <tr>
-          <td><img src="images/Method_16x.png"></td>
-          <td><strong>bool</strong> Init(<strong>ADD0 </strong><em>addressSelect</em>)</strong>
+          <td>
+            <img src="images/Method_16x.png">
+          </td>
+          <td>
+            <strong>bool</strong> Init(
+            <strong>ADD0 </strong>
+            <em>addressSelect</em>)</strong>
           </td>
           <td>
             <p>Initialise le composant avec :</p>
             <ul>
-              <li><strong>addressSelect</strong> : A paramétrer, = ADD0.Gnd (par défaut)</li>
-              <li><strong>oneShotMode</strong> = false (par défaut)</li>
-              <li><strong>alertPolarity</strong> = AlertPolarity.activeHight (par défaut)</li>
-              <li><strong>conversionRate</strong> = ConversionRate.four_Hz (par défaut)</li>
-              <li><strong>thermostatMode</strong> = ThermostatMode.ComparatorMode (par défaut)</li>
+              <li>
+                <strong>addressSelect</strong> : A paramétrer, = ADD0.Gnd (par défaut)</li>
+              <li>
+                <strong>oneShotMode</strong> = false (par défaut)</li>
+              <li>
+                <strong>alertPolarity</strong> = AlertPolarity.activeHight (par défaut)</li>
+              <li>
+                <strong>conversionRate</strong> = ConversionRate.four_Hz (par défaut)</li>
+              <li>
+                <strong>thermostatMode</strong> = ThermostatMode.ComparatorMode (par défaut)</li>
             </ul>
             <br>
-            <strong>Exemple</strong><br>
+            <strong>Exemple</strong>
+            <br>
             <em>ModuleMesureTemp.Init();</em>
           </td>
         </tr>
         <tr>
-          <td><img src="images/Method_16x.png"></td>
-          <td><strong>bool</strong> Init(<br> [
-            <strong>ADD0</strong> <em>addressSelect = ADD0.Gnd</em> ],<br> [
-            <strong>bool</strong> <em>oneShotMode = false</em> ],<br> [
-            <strong>AlertPolarity</strong> <em>alertPolarity = AlertPolarity.activeHight</em> ],<br> [
-            <strong>ConversionRate</strong> <em>conversionRate = ConversionRate.four_Hz</em> ], <br> [
-            <strong>ThermostatMode</strong> <em>thermostatMode = ThermostatMode.ComparatorMode</em> ])
+          <td>
+            <img src="images/Method_16x.png">
+          </td>
+          <td>
+            <strong>bool</strong> Init(
+            <br> [
+            <strong>ADD0</strong>
+            <em>addressSelect = ADD0.Gnd</em> ],
+            <br> [
+            <strong>bool</strong>
+            <em>oneShotMode = false</em> ],
+            <br> [
+            <strong>AlertPolarity</strong>
+            <em>alertPolarity = AlertPolarity.activeHight</em> ],
+            <br> [
+            <strong>ConversionRate</strong>
+            <em>conversionRate = ConversionRate.four_Hz</em> ],
+            <br> [
+            <strong>ThermostatMode</strong>
+            <em>thermostatMode = ThermostatMode.ComparatorMode</em> ])
           </td>
           <td>
             <p>Initialise le composant avec :</p>
             <ul>
-              <li><strong>addressSelect</strong> : A paramétrer, égale à ADD0.Gnd (par défaut) </li>
-              <li><strong>oneShotMode</strong> : A paramétrer, égal à false (par défaut)</li>
-              <li><strong>alertPolarity</strong> : A paramétrer, égale à AlertPolarity.activeHight (par défaut)</li>
-              <li><strong>conversionRate</strong> : A paramétrer, égale à ConversionRate.four_Hz (par défaut)</li>
-              <li><strong>thermostatMode</strong> : A paramétrer, égal à ThermostatMode.ComparatorMode (par défaut</li>
+              <li>
+                <strong>addressSelect</strong> : A paramétrer, égale à ADD0.Gnd (par défaut) </li>
+              <li>
+                <strong>oneShotMode</strong> : A paramétrer, égal à false (par défaut)</li>
+              <li>
+                <strong>alertPolarity</strong> : A paramétrer, égale à AlertPolarity.activeHight (par défaut)</li>
+              <li>
+                <strong>conversionRate</strong> : A paramétrer, égale à ConversionRate.four_Hz (par défaut)</li>
+              <li>
+                <strong>thermostatMode</strong> : A paramétrer, égal à ThermostatMode.ComparatorMode (par défaut</li>
             </ul>
           </td>
         </tr>
         <tr>
-          <td><img src="images/Method_16x.png"></td>
-          <td><strong>float ReadAsCelcius()</strong></td>
-          <td>Renvoi la température de l'air en °C.<br><br>
-            <strong>Exemple</strong><br>
+          <td>
+            <img src="images/Method_16x.png">
+          </td>
+          <td>
+            <strong>float ReadAsCelcius()</strong>
+          </td>
+          <td>Renvoi la température de l'air en °C.
+            <br>
+            <br>
+            <strong>Exemple</strong>
+            <br>
             <em>temperature = ModuleMesureTemp.ReadAsCelcius();</em>
           </td>
         </tr>
         <tr>
-          <td><img src="images/Method_16x.png"></td>
-          <td><strong>float ReadAsFahrenheit()</strong></td>
+          <td>
+            <img src="images/Method_16x.png">
+          </td>
+          <td>
+            <strong>float ReadAsFahrenheit()</strong>
+          </td>
           <td>Renvoi la température de l'air en °F.
-            <br><br>
-            <strong>Exemple</strong><br>
+            <br>
+            <br>
+            <strong>Exemple</strong>
+            <br>
             <em>temperature = ModuleMesureTemp.ReadAsFahrenheit();</em>
           </td>
         </tr>
         <tr>
-          <td><img src="images/Method_16x.png"></td>
-          <td><strong>float ReadAsKelvin()</strong></td>
+          <td>
+            <img src="images/Method_16x.png">
+          </td>
+          <td>
+            <strong>float ReadAsKelvin()</strong>
+          </td>
           <td>Renvoi la température de l'air en K.
-            <br><br>
-            <strong>Exemple</strong><br>
+            <br>
+            <br>
+            <strong>Exemple</strong>
+            <br>
             <em>temperature = ModuleMesureTemp.ReadAsKelvin();</em>
           </td>
         </tr>
         <tr>
-          <td><img src="images/Method_16x.png"></td>
-          <td><strong>float ReadAsRankine()</strong></td>
+          <td>
+            <img src="images/Method_16x.png">
+          </td>
+          <td>
+            <strong>float ReadAsRankine()</strong>
+          </td>
           <td>Renvoi la température de l'air en °R.
-            <br><br>
-            <strong>Exemple</strong><br>
+            <br>
+            <br>
+            <strong>Exemple</strong>
+            <br>
             <em>temperature = ModuleMesureTemp.ReadAsRankine();</em>
           </td>
         </tr>
@@ -454,9 +727,15 @@ namespace test
   <!-- FOOTER  -->
   <div id="footer_wrap" class="outer">
     <footer class="inner ">
-      <p class="copyright">Description de la classe <strong><em>TMP102</em></strong> développée en C# sous .NETMF 4.3 pour les cartes Netduino
-        et FEZ (PANDA, COBRA...) maintained by <a href="https://github.com/WebGE">WebGE</a></p>
-      <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      <p class="copyright">Description de la classe
+        <strong>
+          <em>TMP102</em>
+        </strong> développée en C# sous .NETMF 4.3 pour les cartes Netduino et FEZ (PANDA, COBRA...) maintained by
+        <a href="https://github.com/WebGE">WebGE</a>
+      </p>
+      <p>Published with
+        <a href="https://pages.github.com">GitHub Pages</a>
+      </p>
     </footer>
   </div>
 
