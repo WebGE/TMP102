@@ -25,8 +25,10 @@
         </strong> développée en C# sous .NETMF 4.3 pour les cartes Netduino et FEZ (PANDA, COBRA...)</h2>
 
       <section id="downloads">
-        <a class="zip_download_link" href="https://github.com/WebGE/TMP102/zipball/master">Download this project as a .zip file</a>
-        <a class="tar_download_link" href="https://github.com/WebGE/TMP102/tarball/master">Download this project as a tar.gz file</a>
+        <a class="zip_download_link" href="https://github.com/WebGE/TMP102/zipball/master">Download this project as a .zip
+          file</a>
+        <a class="tar_download_link" href="https://github.com/WebGE/TMP102/tarball/master">Download this project as a tar.gz
+          file</a>
       </section>
     </header>
   </div>
@@ -65,17 +67,18 @@
             </li>
           </ol>
         </li>
-        <li>LES FASCICULES
+        <li>LIENS
           <ol>
             <li>
-              <a href="http://webge.dyndns-server.com/dokuwiki/doku.php?id=netmf43:accueilnetmf" target="_blank">Exemples codés en C# pour les cartes Netduino et Fez (Panda 3, BrainPad)</a>
+              <a href="http://webge.dyndns-server.com/dokuwiki/doku.php?id=netmf43:accueilnetmf" target="_blank">Exemples
+                codés en C# pour les cartes Netduino et Fez (Panda 3, BrainPad)</a>
             </li>
-          </ol>
         </li>
         <li>
-          <a href="http://webge.dyndns-server.com/dokuwiki/doku.php?id=netmf43:6_microtoolskit" target="_blank">La page du projet MicroToolsKit</a>
+          <a href="http://webge.dyndns-server.com/dokuwiki/doku.php?id=netmf43:6_microtoolskit" target="_blank">La page du
+            projet MicroToolsKit</a>
         </li>
-
+        </ol>
       </ol>
       <hr>
       <h3>1. LE MATERIEL</h3>
@@ -269,7 +272,7 @@
       <h4 id="REP">2.1 Contenu du répertoire proposé au téléchargement</h4>
       <hr>
       <p>Le répertoire proposé au téléchargement (au format zip ou tar.gz) contient la solution
-        <strong>NetduinoTMP102</strong> composée :
+        <strong>TMP102</strong> composée :
       </p>
       <ul>
         <li>Du projet
@@ -277,7 +280,9 @@
           <strong>code source</strong> de la classe
           <em>TMP102</em>.</li>
         <li>Du projet
-          <strong>TestNetduinoTMP102 </strong>: un exemple d'utilisation de cette classe.</li>
+          <strong>Netduino</strong>: un exemple d'utilisation de cette classe avec une carte Netduino.</li>
+          <li>Du projet
+            <strong>FezPanda</strong>: un exemple d'utilisation de cette classe avec une carte Panda III.</li>
       </ul>
       <hr>
 
@@ -337,7 +342,7 @@
       <ol>
         <li>
           <strong>Créer </strong>un nouveau projet en suivant la démarche décrite dans le chapitre
-          <em>"Premier programme en C# étape par étape"</em> avec à une carte
+          <em>"Premier programme en C# étape par étape"</em> avec une carte
           <strong>Netduino</strong> ou avec une carte
           <strong>Fez (Panda 3, BrainPad etc)</strong>.
           <a href=" http://webge.dyndns-server.com/dokuwiki/doku.php?id=netmf43:accueilnetmf " target="_blank">[lien]</a>
@@ -571,14 +576,14 @@ namespace test
             <p></p>
             <ul>
               <li>
-                <strong>ComparatorMode</strong> : En mode comparateur, la broche ALERT devient active lorsque la température est
-                égale ou supérieure à la valeur mémorisée dans T_HIGH et génère un nombre consécutif de défauts en accord
+                <strong>ComparatorMode</strong> : En mode comparateur, la broche ALERT devient active lorsque la température
+                est égale ou supérieure à la valeur mémorisée dans T_HIGH et génère un nombre consécutif de défauts en accord
                 avec
-                <em>ConsecutiveFaults</em> La broche ALERT reste active jusqu'à ce que la température soit inférieure à la valeur
-                mémorisée dans T_LOW et que le même nombre de défauts est atteint.</li>
+                <em>ConsecutiveFaults</em> La broche ALERT reste active jusqu'à ce que la température soit inférieure à la
+                valeur mémorisée dans T_LOW et que le même nombre de défauts est atteint.</li>
               <li>
-                <strong>InterruptMode</strong> : en mode interruption, la broche ALERT devient active quand le nombre d'erreurs est
-                atteint... (voir le datasheet pour plus d'informations)
+                <strong>InterruptMode</strong> : en mode interruption, la broche ALERT devient active quand le nombre d'erreurs
+                est atteint... (voir le datasheet pour plus d'informations)
               </li>
             </ul>
           </td>
