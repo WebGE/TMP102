@@ -10,7 +10,7 @@ This class is also in the [MicroToolsKit](https://www.nuget.org/packages/WEBGE.M
 
  ![](img/nuget.JPG)
  
-**Hardware**
+## Hardware
 ----
 **Targets**: Netduino, Netduino2 plus, Netduino 3, FEZ PANDA 3 et COBRA 3.
 
