@@ -1,9 +1,5 @@
 #define tft
-using System;
 using System.Threading;
-using Microsoft.SPOT;
-using Microsoft.SPOT.Hardware;
-
 using Microtoolskit.Hardware.Sensors;
 
 #if tft

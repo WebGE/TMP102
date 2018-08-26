@@ -43,6 +43,7 @@
       <HintPath>..\packages\WebGE.MicroToolsKit.1.4.5.2\lib\netmf43\MicroToolsKit.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="SecretLabs.NETMF.Hardware.NetduinoPlus, Version=4.3.1.0, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
